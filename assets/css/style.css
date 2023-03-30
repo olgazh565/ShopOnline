@@ -17,8 +17,9 @@
 }
 
 body {    
-    font-family: Lato, sans-serif;
+    font-family: Lato, Arial, sans-serif;
     font-size: 22px;
+    font-weight: 400;
     color: #2D2D2D;
     background-color: #ffffff;
     margin: 0;
@@ -31,8 +32,9 @@ body {
 }
 
 .title {
-    font-family: "Lato";
+    font-family: Lato, Arial, sans-serif;
     font-size: 50px;
+    font-weight: 700;
     margin: 0 0 58px 0;
 }
 
