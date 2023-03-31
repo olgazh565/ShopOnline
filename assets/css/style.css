@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: system-ui, 
     -apple-system, 
@@ -11,67 +15,82 @@ body {
     'Helvetica Neue', 
     sans-serif;
     font-size: 22px;
+    line-height: 33px;
     font-weight: 400;
     font-style: normal;
     color: #2D2D2D;
     background-color: #ffffff;
-    margin: 0;
 }
 
 .main {
-    max-width: 1764px;
+    max-width: 1824px;
     margin: 0 auto;
-    padding: 100px 78px 0 78px;
+    padding: 100px 30px 86px 30px;
 }
 
 .title {
     font-size: 50px;
-    font-weight: bold;
-    margin: 0 0 58px 0;
+    font-weight: 700;
+    line-height: 65px;
+    margin: 0 0 60px 0;
 }
 
-.links {
+.navigation {
+    margin: 0;
+    padding: 50px 0;
+}
+
+.navigation__links {
     text-decoration: none;
     font-size: 16px;
+    line-height: 24px;
     font-weight: 400;
     font-style: normal;
     list-style-position: inside;
     padding: 0;
-    margin: 0 0 49px 0;
+    margin: 0;
 }
 
 .links__item {
     text-decoration: none;
     color: #525252;
-    line-height: 1.5;
 }
+
 .wrapper {
     max-width: 1095px;
 }
 
 .foto {
-    margin-bottom: 48px;
+    margin-bottom: 50px;
 }
 
-.foto-img {
-    width: 100%;
+.foto_altered {
+    margin-top: 60px;
+}
+
+.foto_img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    display: block;
 }
 
 .text {
-    margin: 0 0 50px 0;
+    margin: 0 0 33px 0;
 }
 
-.subtitle {
-    font-size: 22px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.text_no-margin {
+.text_altered {
     margin-bottom: 0;
+}
+
+.heading {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
 }
 
 .caption {
     font-size: 22px;
-    font-weight: normal;
+    font-weight: 400;
+    margin: 0;
 }
