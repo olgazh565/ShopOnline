@@ -1,5 +1,5 @@
 @font-face {
-    font-family: Lato;
+    font-family: 'Lato';
     src: local(Lato),
         url("../fonts/lato-regular.woff") format(woff),
         url("../fonts/lato-regular.woff2") format(woff2);
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: Lato;
+    font-family: 'Lato';
     src: 
         url("../fonts/lato-bold.woff") format(woff),
         url("../fonts/lato-bold.woff2") format(woff2);
@@ -16,12 +16,21 @@
     font-display: swap;
 }
 
-* {
+html {
+    position: relative;
     box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 body {
-    font-family: Lato, Arial, sans-serif;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: 'Lato', Arial, sans-serif;
     font-size: 22px;
     line-height: 33px;
     font-weight: 400;
@@ -30,26 +39,30 @@ body {
     background-color: #ffffff;
 }
 
-.main {
-    max-width: 1824px;
-    margin: 0 auto;
-    padding: 100px 30px 86px 30px;
+.article{
+    padding: 100px 0 86px;
 }
 
-.title {
-    font-family: Lato, Arial, sans-serif;
+.container {
+    max-width: 1824px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.article__title {
+    font-family: 'Lato', Arial, sans-serif;
     font-size: 50px;
     font-weight: 700;
     line-height: 65px;
     margin: 0 0 60px 0;
 }
 
-.navigation {
+.article__navigation {
     margin: 0;
     padding: 50px 0;
 }
 
-.navigation__links {
+.article__links {
     text-decoration: none;
     font-size: 16px;
     line-height: 24px;
@@ -69,32 +82,32 @@ body {
     max-width: 1095px;
 }
 
-.foto {
+.article__foto {
     width: 1095px;
     height: 560px;
     display: block;
     margin: 0 0 50px;
 }
 
-.foto_altered {
+.article__foto_altered {
     margin-top: 60px;
 }
 
-.text {
+.article__text {
     margin: 0 0 33px 0;
 }
 
-.text_altered {
+.article__text_altered {
     margin: 0;
 }
 
-.heading {
+.article__heading {
     font-size: 22px;
     font-weight: 700;
     margin: 0;
 }
 
-.caption {
+.article__headline {
     font-size: 22px;
     font-weight: 400;
     margin: 0;
