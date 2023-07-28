@@ -1,0 +1,544 @@
+.galery {
+    padding: 30px 0 30px;
+}
+
+.galery__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 245px);
+    gap: 60px;
+}
+
+.galery__item {
+    border-radius: 20px;
+    background: center/cover no-repeat;
+}
+
+.galery__link {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    line-height: 1.3;
+}
+
+.galery__sticker {
+    width: 88px;
+    height: 88px;
+    font-size: 30px;
+    background-color: #FFBD13;
+    border-radius: 50%;
+    border: none;
+    padding: 25px 9px;    
+}
+
+.galery__item_type_book {
+    background-image: linear-gradient(181.33deg, rgba(0, 0, 0, 0) 9.23%, rgba(0, 0, 0, 0.2) 98.87%), 
+                    url('../imgs/book-full.jpg');
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;    
+}
+
+.book__link {    
+    font-size: 39px;
+    padding: 20px;
+    line-height: 1;
+}
+
+.book__caption {
+    align-self: end;
+}
+
+.book__caption-font-regular {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.galery__item_type_discount-time {
+    background-image: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%), 
+                    url('../imgs/discount-time-full.jpg');
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;    
+}
+
+.discount-time__link {
+    font-size: 30px;
+    padding: 20px;
+}
+
+.discount-time__caption {
+    margin: 62px 0 0 -6px;
+}
+
+.discount-time__sticker {
+    place-self: end;
+}
+
+.galery__item_type_boots {
+    background-image: linear-gradient(180.99deg, rgba(0, 0, 0, 0) 8.18%, rgba(0, 0, 0, 0.2) 99.15%), 
+                    url('../imgs/boots-full.jpg');
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+.boots__link {
+    padding: 20px;
+}
+
+.boots__sticker {
+    place-self: start;   
+}
+
+.galery__item_type_second-pair {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%),
+                    url('../imgs/second-pair-full.jpg');
+    grid-column: 3 / 5;
+    grid-row: 1 / 3;
+    line-height: 1.2;
+}
+
+.second-pair__link {
+    font-size: 40px;
+    font-weight: 400; 
+    padding: 22px 20px;   
+}
+
+.second-pair__caption {
+    background: #38C0EB;
+    border-radius: 20px;
+    padding: 26px 24px;
+    align-self: end;
+}
+
+.second-pair__caption-bold {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.galery__item_type_presents {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 7.46%, rgba(0, 0, 0, 0.2) 100%), 
+                    url('../imgs/presents-full.jpg');
+    grid-column: 5 / 7;
+    grid-row: 1 / 2;
+}
+
+.presents__link {
+    font-size: 40px;
+    padding: 30px;
+}
+
+.presents__caption {
+    place-self: end start;
+}
+
+.galery__item_type_december-offer {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 12.28%, rgba(0, 0, 0, 0.2) 100%), 
+                    url('../imgs/december-offer-full.jpg');
+    grid-column: 5 / 7;
+    grid-row: 2 / 3;    
+}
+
+.december-offer__link {
+    font-size: 40px;
+    padding: 20px;
+    align-items: end;
+    grid-template-columns: auto auto;
+}
+
+.december-offer__caption {
+    margin: 0 0 10px 10px;
+}
+
+.december-offer__sticker {
+    justify-self: end;
+}
+
+.galery__item_type_decorations {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), 
+                    url('../imgs/2022-full.jpg') bottom -70px center;
+    grid-column: 1 / 5;
+    grid-row: 3 / 5;
+}
+
+.decorations__link {
+    font-size: 40px;
+    line-height: 1.2;
+    padding: 50px;
+}
+
+.decorations__caption {
+    text-transform: uppercase;
+    color: #F91155;
+    padding: 35px 41px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    place-self: end start;
+}
+
+.galery__item_type_dresses {
+    background-image: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%),
+                    url('../imgs/red-dress-full.jpg');
+    grid-column: 5 / 6;
+    grid-row: 3 / 5;
+}
+
+.dresses__link {
+    padding: 20px;
+}
+
+.dresses__sticker {
+    place-self: end;
+}
+
+.galery__item_type_cleaning-products {
+    background-image: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%), 
+                    url('../imgs/cleaning-products-full.jpg');
+    grid-column: 6 / 7;
+    grid-row: 3 / 4;
+}
+
+.cleaning-products__link {
+    font-size: 30px;
+    padding: 20px;
+}
+
+.cleaning-products__caption {
+    place-self: end start;
+}
+
+.cleaning-products__sticker {
+    place-self: start;
+}
+
+.galery__item_type_christmas-toys {
+    background-image: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%), 
+                    url('../imgs/christmas-toys.jpg');
+    grid-column: 6 / 7;
+    grid-row: 4 / 5;
+}
+
+@media (max-width: 1240px) {
+    .galery {
+        padding: 11px 0 30px;
+    }
+    .galery__list {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 217px) 418px;
+        gap: 24px;
+    }
+    .book__link {    
+        font-size: 30px;
+        padding: 0 18px 28px 9px;
+        line-height: 1;
+    }
+    .book__caption-font-regular {
+        font-size: 24px;
+    }
+    .discount-time__link {
+        font-size: 24px;
+        padding: 10px;
+    }
+    .discount-time__caption {
+        margin: 50px 0 0 -1px;
+    }
+    .galery__item_type_boots {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3; 
+    }
+    .boots__link {
+        padding: 10px;
+    }
+    .galery__item_type_second-pair {
+        grid-column: 3 / 5;
+        grid-row: 1 / 3;
+        line-height: 1.2; 
+    }
+    .second-pair__link {
+        font-size: 30px;        
+        padding: 22px;   
+    }
+    .second-pair__caption {
+        padding: 29px 25px;
+        line-height: 1.4;
+    }
+    .second-pair__caption-bold {
+        font-size: 40px;
+        line-height: 1.1;
+    }
+    .galery__item_type_presents {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4; 
+    }
+    .presents__link {
+        font-size: 30px;
+        padding: 20px 55px 27px 20px;
+    }
+    .galery__item_type_december-offer {
+        grid-column: 1 / 3;
+        grid-row: 4 / 5; 
+    }
+    .december-offer__link {
+        font-size: 30px;
+        padding: 10px;
+    }
+    .december-offer__caption {
+        margin: 0 0 7px 10px;
+    }
+    .galery__item_type_decorations {
+        background-position: center;
+        grid-column: 1 / 5;
+        grid-row: 5 / 6; 
+    }
+    .decorations__link {
+        font-size: 30px;
+        padding: 39px 30px;
+        line-height: 1;
+    }
+    .decorations__caption {
+        padding: 30px 47px 24px;        
+    }
+    .galery__item_type_dresses {
+        grid-column: 3 / 4;
+        grid-row: 3 / 5; 
+    }
+    .dresses__link {
+        padding: 10px;
+    }
+    .galery__item_type_cleaning-products {
+        grid-column: 4 / 5;
+        grid-row: 3 / 4; 
+    }
+    .cleaning-products__link {
+        font-size: 20px;
+        padding: 10px;
+    }
+    .cleaning-products__caption {
+        place-self: end start;
+        padding: 0 0 2px 4px;
+    }
+    .galery__item_type_christmas-toys {
+        grid-column: 4 / 5;
+        grid-row: 4 / 5; 
+    }
+}
+
+@media (max-width: 768px) {
+    .galery {
+        padding: 20px 0 30px;
+    }
+    .galery__list {
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(8, 60px) 337px;
+        gap: 20px;
+    } 
+    .galery__item {
+        border-radius: 12px;
+    }
+    .galery__sticker {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+        padding: 16px 6px;    
+    }
+    .galery__item_type_book {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3; 
+    }
+    .book__link {    
+        font-size: 26px;
+        padding: 20px 10px;
+        line-height: 0.85;
+    }
+    .book__caption-font-regular {
+        font-size: 20px;
+    }
+    .galery__item_type_discount-time {
+        grid-column: 3 / 5;
+        grid-row: 1 / 3; 
+    } 
+    .discount-time__link {
+        font-size: 16px;
+    }
+    .discount-time__caption {
+        margin: 7px 0 0 -5px;
+    }
+    .galery__item_type_boots {
+        grid-column: 1 / 5;
+        grid-row: 3 / 5; 
+    }
+    .galery__item_type_second-pair {
+        grid-column: 5 / 10;
+        grid-row: 1 / 6; 
+        line-height: 1.4;
+    }
+    .second-pair__link {
+        font-size: 16px;        
+        padding: 10px;   
+    }
+    .second-pair__caption {
+        padding: 18px 28px 14px;
+        border-radius: 12px;
+    }
+    .second-pair__caption-bold {
+        font-size: 26px;
+    }
+    .galery__item_type_presents {
+        grid-column: 1 / 5;
+        grid-row: 5 / 7; 
+    }
+    .presents__link {
+        font-size: 16px;
+        line-height: 1.2;
+        padding: 20px 85px 20px 20px;
+    }
+    .galery__item_type_december-offer {
+        grid-column: 1 / 5;
+        grid-row: 7 / 9; 
+    }
+    .december-offer__link {
+        font-size: 16px;
+    }
+    .december-offer__caption {
+        margin: 0 0 10px 10px;
+    }
+    .galery__item_type_decorations {
+        background-size: 90%;
+        grid-column: 1 / 10;
+        grid-row: 9 / 10; 
+    }
+    .decorations__link {
+        font-size: 20px;
+        padding: 26px;
+        line-height: 1.2;
+    }
+    .decorations__caption {
+        padding: 24px 34px 20px;
+        border-radius: 12px;        
+    }
+    .galery__item_type_dresses {
+        background-position: top center;
+        grid-column: 5 / 8;
+        grid-row: 6 / 9; 
+    }
+    .galery__item_type_cleaning-products {
+        grid-column: 8 / 10;
+        grid-row: 6 / 8; 
+    }
+    .cleaning-products__link {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+    .galery__item_type_christmas-toys {
+        grid-column: 8 / 10;
+        grid-row: 8 / 9; 
+    } 
+}
+
+@media (max-width: 500px) {
+    .galery {
+        padding: 10px 0 30px;
+    } 
+    .galery__list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 130px 118px repeat(2, 130px) repeat(2, 118px) repeat(2, 130px) 123px;
+    } 
+    .galery__item {
+        border-radius: 8px;
+    }
+    .galery__item_type_book {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2; 
+    }
+    .book__link {    
+        font-size: 16px;
+        font-weight: 800;
+        padding: 10px 55px 10px 10px;
+        line-height: 0.9;
+    }
+    .book__caption-font-regular {
+        font-size: 12px;
+    }
+    .galery__item_type_discount-time {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2; 
+    }
+    .discount-time__link {
+        font-size: 12px;
+        padding: 5px;
+    }
+    .discount-time__caption {
+        margin: 23px 0 0 5px;
+    }
+    .galery__item_type_boots {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3; 
+    }
+    .boots__link {
+        padding: 5px;
+    }
+    .galery__item_type_second-pair {
+        grid-column: 1 / 3;
+        grid-row: 3 / 5; 
+    }
+    .second-pair__link {
+        font-size: 12px;        
+    }
+    .second-pair__caption {
+        padding: 9px 25px;
+        border-radius: 8px;
+    }
+    .second-pair__caption-bold {
+        font-size: 16px;
+    }
+    .galery__item_type_presents {
+        grid-column: 1 / 3;
+        grid-row: 5 / 6; 
+    }
+    .presents__link {
+        font-size: 12px;
+        padding: 16px 10px;
+    }
+    .galery__item_type_december-offer {
+        grid-column: 1 / 3;
+        grid-row: 6 / 7; 
+    } 
+    .december-offer__link {
+        font-size: 12px;
+        padding: 5px;
+    }
+    .december-offer__caption {
+        margin: 0 0 10px 5px;
+    }
+    .galery__item_type_decorations {
+        grid-column: 1 / 3;
+        grid-row: 9 / 10; 
+    }
+    .decorations__link {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+    .decorations__caption {
+        padding: 8px 41px;
+        border-radius: 6px;        
+    }
+    .galery__item_type_dresses {
+        grid-column: 1 / 2;
+        grid-row: 7 / 9; 
+    }
+    .galery__item_type_cleaning-products {
+        grid-column: 2 / 3;
+        grid-row: 7 / 8; 
+    }
+    .cleaning-products__link {
+        font-size: 12px;
+        line-height: 1.2;
+        padding: 5px;
+    }
+    .cleaning-products__caption {
+        place-self: end start;
+        padding: 0 0 5px 4px;
+    }
+    .galery__item_type_christmas-toys {
+        grid-column: 2 / 3;
+        grid-row: 8 / 9; 
+    }
+}
