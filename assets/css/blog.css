@@ -33,6 +33,8 @@
     width: 195px;
     height: 195px;
     border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .blog__title {

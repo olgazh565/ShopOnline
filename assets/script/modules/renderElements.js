@@ -35,7 +35,7 @@ export const renderArticles = (data) => {
         return articleItem;
     });
 
-    articlesList && articlesList.append(...articles);
+    articlesList.append(...articles);
 };
 
 export const renderPagination = ({pages: pagesTotal, page}) => {
@@ -47,7 +47,7 @@ export const renderPagination = ({pages: pagesTotal, page}) => {
 
     switch (page) {
         case 1:
-            previousPage = 1;
+            previousPage = page;
             currentPage = page + 1;
             nextPage = page + 2;
             break;
