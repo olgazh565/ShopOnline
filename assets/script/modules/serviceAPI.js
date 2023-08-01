@@ -12,13 +12,17 @@ export const getArticles = async (
 
     const pageNum = params.get('page') ? params.get('page') : 1;
 
-    const result = await fetch(`${API_URL}/posts?page=${pageNum}`);
-    const {data, meta: {pagination}} = await result.json();
+    try {
+        const result = await fetch(`${API_URL}/posts?page=${pageNum}`);
+        const {data, meta: {pagination}} = await result.json();
 
-    renderArticles(data);
-    renderPagination(pagination);
-    controlPagination(pagination);
-    controlArrows(pagination);
+        renderArticles(data);
+        renderPagination(pagination);
+        controlPagination(pagination);
+        controlArrows(pagination);
+    } catch (err) {
+        console.log(err);
+    }
 };
 
 export const getArticle = async (renderArticle) => {
@@ -28,15 +32,23 @@ export const getArticle = async (renderArticle) => {
 
     const articleId = params.get('id');
 
-    const result = await fetch(`${API_URL}/posts/${articleId}`);
-    const {data} = await result.json();
+    try {
+        const result = await fetch(`${API_URL}/posts/${articleId}`);
+        const {data} = await result.json();
 
-    renderArticle(data);
+        renderArticle(data);
+    } catch (err) {
+        console.log(err);
+    }
 };
 
 export const getUserName = async (userId) => {
-    const result = await fetch(`${API_URL}/users/${userId}`);
-    const {data} = await result.json();
+    try {
+        const result = await fetch(`${API_URL}/users/${userId}`);
+        const {data} = await result.json();
 
-    return data;
+        return data;
+    } catch (err) {
+        console.log(err);
+    }
 };
