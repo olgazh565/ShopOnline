@@ -71,6 +71,14 @@
     line-height: 0;
 }
 
+.footer__item_contacts {
+    margin-bottom: 21px;
+}
+
+.footer__item_contacts:nth-child(2) {
+    margin-bottom: 36px;
+}
+
 .footer__copyright {
     grid-area: copyright;
     font-size: 16px;
@@ -128,6 +136,10 @@
     }
     .footer__item_contacts {
         font-size: 12px;
+        margin-bottom: 13px;
+    }
+    .footer__item_contacts:nth-child(2) {
+        margin-bottom: 30px;
     }    
     .footer__socials {
         gap: 15px;
