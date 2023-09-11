@@ -12,6 +12,7 @@
 
 .header__logo {
     grid-area: logo;
+    display: block;
     justify-self: start;
     padding-top: 14px;
     font-size: 0;

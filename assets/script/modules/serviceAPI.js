@@ -14,6 +14,7 @@ export const getArticles = async (
 
     try {
         const result = await fetch(`${API_URL}/posts?page=${pageNum}`);
+        console.log('result: ', result);
         const {data, meta: {pagination}} = await result.json();
 
         renderArticles(data);

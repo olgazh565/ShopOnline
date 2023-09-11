@@ -62,6 +62,7 @@ const createTimer = (elem) => {
                 <span class="timer__count timer__count_seconds"></span>
                 <span class="timer__units timer__units_seconds"></span>
             </p>
+        </div>
         `;
 };
 
