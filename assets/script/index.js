@@ -2,9 +2,6 @@
 
 const getTimeRemaining = (deadline) => {
     const dateStop = new Date(deadline);
-    console.log('dateStop: ', dateStop);
-    const dateStop2 = new Date(`${deadline} GMT+01:00`);
-    console.log('dateStop2: ', dateStop2);
 
     // отображаем время UTC +3
     const stopHours = dateStop.getHours();
