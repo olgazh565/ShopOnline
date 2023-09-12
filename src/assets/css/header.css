@@ -27,7 +27,7 @@
     line-height: 150%;
     border-radius: 10px;
     padding: 9px 28px 12px 61px;
-    background: url("../imgs/menu.svg") no-repeat center left 30px #3670C7;
+    background: url("../assets/imgs/menu.svg") no-repeat center left 30px #3670C7;
     border: none;
 }
 
@@ -59,7 +59,7 @@
 
 .search__button {
     color: var(--main-color, #ffffff);
-    background: url("../imgs/search.svg") no-repeat center #3670C7;
+    background: url("../assets/imgs/search.svg") no-repeat center #3670C7;
     border-radius: 30px;
     height: 100%;
     border: 0;
@@ -92,15 +92,15 @@
 }
 
 .user__link_type_profile::before {
-    background-image: url("../imgs/profile.svg");
+    background-image: url("../assets/imgs/profile.svg");
 }
 
 .user__link_type_basket::before {
-    background-image: url("../imgs/shopping_cart.svg");    
+    background-image: url("../assets/imgs/shopping_cart.svg");    
 }
 
 .user__link_type_favorite::before {
-    background-image: url("../imgs/favorite.svg");
+    background-image: url("../assets/imgs/favorite.svg");
 }
 
 @media (max-width: 1500px) {

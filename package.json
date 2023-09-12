@@ -1,0 +1,26 @@
+{
+  "name": "gulp-template",
+  "version": "1.0.0",
+  "description": "gulp template",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Olga Zhebit",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "del": "^7.1.0",
+    "gulp": "^4.0.2",
+    "gulp-cssimport": "^7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olgazh565/ShopOnline.git"
+  },
+  "bugs": {
+    "url": "https://github.com/olgazh565/ShopOnline/issues"
+  },
+  "homepage": "https://github.com/olgazh565/ShopOnline#readme"
+}
