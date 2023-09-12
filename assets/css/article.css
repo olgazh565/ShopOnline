@@ -1,5 +1,5 @@
-.breadcrumbs {
-    padding: 148px 0 40px;
+.article__main {
+    padding: 15px 0 150px;
 }
 
 .article__container {
@@ -11,11 +11,15 @@
 .article__container_grid {
     display: grid;
     grid-template-columns: minmax(800px, 1095px) minmax(400px, 532px);
+    grid-template-areas: 
+        'breadcrumbs .'
+        'article addv';
     align-items: flex-start;
-    gap: 140px;
+    gap: 80px 140px;
 }
 
 .breadcrumbs__list {
+    grid-area: breadcrumbs;
     font-size: 16px;
     color: #525252;
     display: flex;
@@ -39,11 +43,8 @@
     color: #3670C7;
 }
 
-.article__main {
-    padding: 40px 0 200px;
-}
-
 .article {
+    grid-area: article;
     color: #2D2D2D;
     max-width: 1095px;
 }
@@ -124,6 +125,7 @@
 }
 
 .add {
+    grid-area: addv;
     max-width: 532px;
 }
 

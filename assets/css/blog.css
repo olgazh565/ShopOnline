@@ -1,5 +1,9 @@
 .blog {
-    padding: 100px 0 100px;
+    padding: 23px 0 150px;
+}
+
+.breadcrumbs__container {
+    padding-bottom: 80px;
 }
 
 .blog__container {
