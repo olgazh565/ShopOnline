@@ -23,14 +23,18 @@ export const js = () => gulp
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream());
 
-export const copy = () => gulp
-        .src([
-            'src/assets/fonts/*',
-            'src/assets/imgs/*',
-        ], {
-            base: 'src',
-        })
-        .pipe(gulp.dest('dist'))
+// функция копирования изображений
+export const images = () => gulp
+        .src('src/assets/imgs/*')
+        .pipe(gulp.dest('dist/imgs'))
+        .pipe(browserSync.stream({
+            once: true,
+        }));
+
+// функция копирования шрифтов
+export const fonts = () => gulp
+        .src('src/assets/fonts/*')
+        .pipe(gulp.dest('dist/fonts'))
         .pipe(browserSync.stream({
             once: true,
         }));
@@ -48,10 +52,8 @@ export const server = () => {
     gulp.watch('./src/**/*.html', html);
     gulp.watch('./src/assets/css/*.css', css);
     gulp.watch('./src/assets/script/**/*.js ', js);
-    gulp.watch([
-        './src/assets/imgs/*',
-        './src/assets/fonts/*',
-    ], copy);
+    gulp.watch('./src/assets/imgs/*', images);
+    gulp.watch('./src/assets/fonts/* ', fonts);
 };
 
 export const clear = (done) => {
@@ -63,7 +65,7 @@ export const clear = (done) => {
 
 // запуск
 
-export const base = gulp.parallel(html, css, js, copy);
+export const base = gulp.parallel(html, css, js, images, fonts);
 
 export const build = gulp.series(clear, base);
 

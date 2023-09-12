@@ -4,7 +4,7 @@
 
 .banner__wrapper {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                url('../assets/imgs/banner-full.jpg') center/115% no-repeat;
+                url('../imgs/banner-full.jpg') center/115% no-repeat;
     max-width: 1770px;
     line-height: 130%;
     border-radius: 20px;
