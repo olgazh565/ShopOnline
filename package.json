@@ -1,11 +1,13 @@
 {
-  "name": "gulp-template",
+  "name": "shop-online",
   "version": "1.0.0",
-  "description": "gulp template",
+  "description": "online shop",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp",
+    "build": "gulp build",
+    "clear dist": "gulp clear"
   },
   "author": "Olga Zhebit",
   "license": "ISC",
@@ -13,7 +15,9 @@
     "browser-sync": "^2.29.3",
     "del": "^7.1.0",
     "gulp": "^4.0.2",
-    "gulp-cssimport": "^7.0.0"
+    "gulp-cssimport": "^7.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.66.1"
   },
   "repository": {
     "type": "git",

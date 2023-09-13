@@ -216,6 +216,14 @@
     grid-row: 4 / 5;
 }
 
+
+@media (max-width: 1500px) {
+    .galery__list {
+        gap: 30px;
+    }
+}
+
+
 @media (max-width: 1240px) {
     .galery {
         padding: 11px 0 45px;
@@ -321,7 +329,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .galery {
         padding: 20px 0 30px;
     }
@@ -433,7 +441,7 @@
     } 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .galery {
         padding: 10px 0 35px;
     } 
