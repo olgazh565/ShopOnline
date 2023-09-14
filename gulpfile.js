@@ -1,6 +1,6 @@
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
-import sassPkg from 'sass';
+import * as sassPkg from 'sass';
 import gulpSass from 'gulp-sass';
 import {deleteSync} from 'del';
 
