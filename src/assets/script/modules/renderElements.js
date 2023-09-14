@@ -111,7 +111,7 @@ export const renderPagination = ({pages: pagesTotal, page}) => {
 export const renderArticle = async ({user_id: userId, title, body}) => {
     const {name} = await getUserName(userId);
 
-    const article = document.querySelector('.article');
+    const article = document.querySelector('.article__wrapper');
     const breadCrumbsLink = document.querySelector('.breadcrumbs__item_active');
 
     breadCrumbsLink.textContent = title;

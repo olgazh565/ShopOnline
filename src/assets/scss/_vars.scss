@@ -1,0 +1,38 @@
+// переменные для цветов
+
+$main-color: #FFFFFF;
+$secondary-color: #2D2D2D;
+$blue-color: #3670C7;
+
+// Миксин для шрифтов
+
+@mixin font ($name, $weight) {
+    font: {
+        family: $name;
+        weight: $weight;
+        display: swap;
+        style: normal;
+    }
+    src: url('../fonts/#{$name}-#{$weight}.woff2') format('woff2'),
+        url('../fonts/#{$name}-#{$weight}.woff') format('woff'),
+}
+
+// Миксины для медиа-запросов
+
+@mixin lg {
+    @media (max-width: 1240px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width: 850px) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (max-width: 600px) {
+        @content;
+    }
+}

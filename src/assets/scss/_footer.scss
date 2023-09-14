@@ -1,0 +1,223 @@
+.footer {
+    background-color: $secondary-color;
+    padding: 80px 0;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 150%; 
+
+    @include lg {
+        padding: 60px 0 44px;
+    }
+    @include md {
+        padding: 40px 0;
+        font-size: 16px;
+    }
+    @include sm {
+        padding: 30px 0 20px;
+        font-size: 12px;    
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: minmax(190px, 310px) minmax(480px, 580px) minmax(255px, 435px) minmax(250px, 280px);
+        grid-template-areas: 
+            'logo catalog customers contacts'
+            'copyright . . designer';
+        row-gap: 50px;
+
+        @include lg {
+            grid-template-columns: minmax(225px, 300px) minmax(253px, 340px) minmax(250px, 280px);
+            grid-template-areas: 
+                'logo . .'
+                'catalog customers contacts'
+                'copyright . designer';
+            row-gap: 60px;
+        }
+        @include md {
+            grid-template-columns: minmax(180px, 225px) minmax(190px, 225px) minmax(200px, 220px);
+            row-gap: 45px;
+        }
+        @include sm {
+            grid-template-columns: max-content;
+            grid-template-areas: 
+                'logo .'
+                'catalog .'
+                'customers .'
+                'contacts .'
+                'copyright designer';
+            row-gap: 0; 
+        }
+    }
+
+    &__logo {
+        grid-area: logo;
+
+        @include md {
+            width: 152px;
+        }
+        @include sm {
+            width: 127px;
+            margin-bottom: 27px;     
+        }
+    }
+
+    &__group {
+        @include sm {
+            margin-bottom: 30px;     
+        }
+
+        &_catalog {
+            grid-area: catalog;
+        }
+
+        &_customers {
+            grid-area: customers;
+        }
+
+        &_contacts {
+            grid-area: contacts;
+
+            @include sm {
+                margin-bottom: 60px;     
+            }
+        }
+    }
+
+    &__title {
+        font-size: 32px;
+        line-height: 130%;
+        margin-bottom: 40px;
+
+        @include md {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+        @include sm {
+            font-size: 20px;
+            margin-bottom: 10px;     
+        }
+    }
+
+    &__list {
+        &_catalog {
+            display: grid;
+            grid-template-columns: repeat(2, 225px);
+            grid-template-rows: repeat(5, max-content);
+            grid-auto-flow: column;
+            column-gap: 30px;
+
+            @include lg {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(10, max-content);
+                column-gap: 0;
+            }
+        }
+    }
+
+    &__item {
+        margin-bottom: 15px;
+
+        @include sm {
+            margin-bottom: 8px;
+            font-size: 12px;
+            line-height: 120%;     
+        }
+
+        &:nth-child(5) {
+            margin-bottom: 0;
+
+            @include lg {
+                margin-bottom: 15px;
+            }
+
+            @include sm {
+                margin-bottom: 8px;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &_contacts {
+            font-size: 16px;
+            line-height: 130%;
+            margin-bottom: 21px;
+
+            &:nth-child(2) {
+                margin-bottom: 36px;
+
+                @include md {
+                    margin-bottom: 30px;
+                }
+                @include sm {
+                    margin-bottom: 23px;     
+                }
+            }
+
+            @include md {
+                font-size: 12px;
+                margin-bottom: 13px;
+            }
+            @include sm {
+                font-size: 10px;
+                margin-bottom: 10px;     
+            }
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include md {
+            gap: 15px;
+        }
+    }
+
+    &__copyright {
+        grid-area: copyright;
+        font-size: 16px;
+        line-height: 130%;
+
+        @include md {
+            font-size: 12px;
+        }
+        @include sm {
+            font-size: 10px;     
+        }
+    }
+
+    &__designer {
+        grid-area: designer;
+        font-size: 16px;
+        line-height: 130%;
+
+        @include md {
+            font-size: 12px;
+        }
+        @include sm {
+            font-size: 10px;
+            margin-left: -40px;     
+        }
+    }
+}
+
+.socials {
+    &__link {
+        display: block;
+        font-size: 0;
+        line-height: 0;
+    }
+}
+
+.designer {
+    &__info {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}
+

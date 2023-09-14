@@ -20,7 +20,7 @@ body {
     min-height: 100vh;
     font-family: 'Lato', sans-serif;
     background-color: #FFFFFF;    
-    color: var(--main-color, #FFFFFF);
+    color: $main-color;
     font-style: normal;
     font-weight: 700;
     line-height: 1.3;
@@ -62,28 +62,25 @@ fieldset {
     border: none;
 }
 
+.visually-hidden {
+    position: fixed;
+    transform: scale(0);
+}
+
 .container {
     max-width: 1830px;
     padding: 0 30px;
     margin: 0 auto;
-}
-
-@media (max-width: 1240px) {
-    .container {
-        max-width: 1240px; 
+    
+    @include lg {
+        max-width: 1240px;
     }
-}
-
-@media (max-width: 850px) {
-    .container {
+    @include md {
         max-width: 850px;
     }
-}
-
-@media (max-width: 600px) {
-    .container {
+    @include sm {
         max-width: 600px; 
-        padding: 0 20px;       
+        padding: 0 20px;     
     }
 }
 

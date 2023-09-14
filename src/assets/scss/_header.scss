@@ -1,0 +1,272 @@
+.header {
+    padding: 26px 0 45px;
+
+    @include lg {
+        padding: 34px 0 30px;
+    }
+    @include md {
+        padding: 25px 0;
+    }
+    @include sm {
+        padding: 10px 0;     
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: minmax(150px, 212px) minmax(140px, 155px) minmax(200px, 757px) minmax(150px, 354px);
+        grid-template-areas: 'logo menu-button search user-info';
+        gap: 97px;
+        align-items: center;
+
+        @media (max-width: 1500px) {
+            gap: 30px;
+        }
+        @include lg {
+            grid-template-columns: max-content 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+                'logo user-info'
+                'menu-button search';
+            gap: 34px 50px;
+        }
+        @include md {
+            grid-template-columns: 115px 1fr;
+            gap: 29px 45px;
+        }
+        @include sm {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            grid-template-areas: 
+                'logo .'
+                'menu-button user-info'
+                'search search';
+            gap: 20px;
+            max-width: 100%;     
+        }
+    }
+
+    &__logo {
+        grid-area: logo;
+        display: block;
+        justify-self: start;
+        padding-top: 14px;
+        font-size: 0;
+
+        @include lg {
+            padding-top: 8px;
+        }
+        @include md {
+            width: 165px;
+        }
+        @include sm {
+            width: 114px;     
+        }
+
+        svg {
+            @include md {
+                width: 165px;
+                height: auto;
+            }
+        }
+    }
+
+    &__menu-button {
+        grid-area: menu-button;    
+        justify-self: center;
+        color: $main-color;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 150%;
+        border-radius: 10px;
+        padding: 9px 28px 12px 61px;
+        background: url("../imgs/menu.svg") no-repeat center left 30px $blue-color;
+        border: none;
+
+        @media (max-width: 1500px) {
+            justify-self: start;
+        }
+        @include lg {
+            padding: 11px 30px 10px 61px;
+            background-position: center left 33px;
+        }
+        @include md {
+            border-radius: 6px;
+            font-size: 16px;
+            line-height: 1.3;
+            padding: 11px 21px 10px 49px;
+            background-position: center left 24px;
+            background-size: 18px;
+        }
+        @include sm {
+            border-radius: 4px;
+            font-size: 12px;
+            padding: 8px 14px 6px 31px;
+            background-position: center left 17px;
+            background-size: 11px;     
+        }
+    }
+
+    &__search {
+        grid-area: search;
+        background: #EFEFEF;
+        border-radius: 30px;    
+        display: grid;
+        grid-template-columns: auto 101px;
+        align-items: center;
+
+        @include md {
+            grid-template-columns: auto 82px;
+        }
+        @include sm {
+            grid-template-columns: 1fr 50px;     
+        }
+    }
+
+    &__user {
+        grid-area: user-info;
+        max-width: 354px;
+        font-size: 16px;
+        line-height: 130%;
+        color: #2D2D2D;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 70px;
+        justify-items: start;
+        align-items: end;
+
+        @media (max-width: 1500px) {
+            gap: 40px;
+        }
+        @include lg {
+            max-width: 294px;
+            justify-self: end;
+        }
+        @include md {
+            max-width: 221px;
+            font-size: 12px;
+            gap: 30px;
+            justify-self: end;
+            line-height: 1;
+        }
+        @include sm {
+            max-width: 100%;
+            gap: 20px;
+            justify-self: end;     
+        }
+    }
+}
+
+.search {
+    &__input {
+        font-size: 16px;
+        line-height: 1.3;
+        color: #8F8F8F;  
+        background: inherit;
+        border: 0;
+        border-radius: 30px;
+        padding: 15px 10px 18px 40px;
+        max-width: 100%;
+
+        @include md {
+            font-size: 12px;
+            line-height: 1.35;
+            padding: 13px 10px 13px 30px;
+        }
+        @include sm {
+            font-size: 10px;
+            line-height: 1.3;
+            padding: 9px 10px 10px 16px;     
+        }
+
+        &::placeholder {
+            font-size: 16px;
+            line-height: 1.3;
+            color: #8F8F8F;
+
+            @include md {
+                font-size: 12px;
+            }
+            @include sm {
+                font-size: 10px;    
+            }
+        }
+    }
+
+    &__button {
+        color: $main-color;
+        background: url("../imgs/search.svg") no-repeat center $blue-color;
+        border-radius: 30px;
+        height: 100%;
+        border: 0;
+
+        @include md {
+            background-size: 22px;
+        }
+        @include sm {
+            background-size: 15px;  
+        }
+    }
+}
+
+.user {
+    &__link {
+        display: block;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 36px;
+            height: 36px;
+            margin: 0 auto 4px;
+            background: no-repeat center/auto;
+
+            @include lg {
+                margin: 0 auto 5px;
+            }
+            @include md {
+                width: 30px;
+                height: 30px;
+                margin: 0 auto 2px;
+                background-size: 25px;
+            }
+        }
+
+        &_type_profile {
+            &::before {
+                background-image: url("../imgs/profile.svg");
+
+                @include md {
+                    background-size: 20px;
+                }
+            }
+        }
+
+        &_type_basket {
+            &::before {
+                background-image: url("../imgs/shopping_cart.svg");  
+                
+                @include md {
+                    background-size: 29px;
+                }
+            }
+        }
+
+        &_type_favorite {
+            &::before {
+                background-image: url("../imgs/favorite.svg");
+
+                @include md {
+                    background-size: 25px;
+                }
+            }
+        }
+    }
+
+    &__text {
+        @include sm {
+            display: none;     
+        }
+    }
+}
+
+

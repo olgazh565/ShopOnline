@@ -2,38 +2,26 @@ import gulp from 'gulp';
 import browserSync from 'browser-sync';
 import sassPkg from 'sass';
 import gulpSass from 'gulp-sass';
-import gulpCssimport from 'gulp-cssimport';
 import {deleteSync} from 'del';
-
-const prepros = false;
 
 const sass = gulpSass(sassPkg);
 
 // задачи
 
+// обработка html файлов
 export const html = () => gulp
         .src('src/*.html')
         .pipe(gulp.dest('dist'))
         .pipe(browserSync.stream());
 
 // обработка scss файлов
-export const style = () => {
-    if (prepros) {
-        return gulp
-                .src('src/assets/scss/**/*.scss')
-                .pipe(sass().on('error', sass.logError))
-                .pipe(gulp.dest('disct/css'))
-                .pipe(browserSync.stream());
-    }
-    return gulp
-            .src('src/assets/css/index.css')
-            .pipe(gulpCssimport({
-                extensions: ['css'],
-            }))
-            .pipe(gulp.dest('dist/css'))
-            .pipe(browserSync.stream());
-};
+export const style = () => gulp
+        .src('src/assets/scss/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('dist/css'))
+        .pipe(browserSync.stream());
 
+// обработка js файлов
 export const js = () => gulp
         .src('src/assets/script/**/*.js')
         .pipe(gulp.dest('dist/js'))
@@ -55,6 +43,7 @@ export const fonts = () => gulp
             once: true,
         }));
 
+// gulp server
 export const server = () => {
     browserSync.init({
         ui: false,
@@ -66,12 +55,13 @@ export const server = () => {
     });
 
     gulp.watch('./src/**/*.html', html);
-    gulp.watch('./src/assets/css/*.css', style);
+    gulp.watch('./src/assets/scss/*.scss', style);
     gulp.watch('./src/assets/script/**/*.js', js);
     gulp.watch('./src/assets/imgs/*', images);
     gulp.watch('./src/assets/fonts/* ', fonts);
 };
 
+// очистка папки dist
 export const clear = (done) => {
     deleteSync(['dist/**/*'], {
         force: true,
