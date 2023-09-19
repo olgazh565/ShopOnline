@@ -13,12 +13,16 @@
 
     &__wrapper {
         background: {
-            image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url('../imgs/banner-full.jpg');
+            image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../imgs/banner-full.jpg');
             position: center;
             size: 115%;
             repeat: no-repeat;
         }
+        background-image: -webkit-image-set(
+            url('../imgs/banner-full.avif') 1x,
+            url('../imgs/banner-full.webp') 1x,
+            url('../imgs/banner-full.jpg') 1x
+        );
         max-width: 100%;
         line-height: 130%;
         border-radius: 20px;
