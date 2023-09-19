@@ -2,17 +2,16 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopOnline</title>
+    <title>ShopOnline-article</title>
 
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="icon" type="image/svg+xml" href="./imgs/favorite.svg">
     <link rel="preload" href="./fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/lato-700.woff2" as="font" type="font/woff2" crossorigin>
-    <script type="module" src="./js/index.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
 
+    <script type="module" src="./js/main.js"></script>
 </head>
+
 <body>
     <header class="header">
         <div class="container header__container">
@@ -38,196 +37,53 @@
         </div>
     </header>
 
-    <main>
-        <section class="banner">
-            <div class="container">
-                <div class="banner__wrapper">
-                    <h1 class="visually-hidden">ShopOnline-интернет-магазин потребительских товаров</h1>
-                    <a class="banner__link" href="#">
-                        <p class="banner__caption">-50% на все ноутбуки</p>
+    <main class="article">
+        <div class="container article__container">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="index.html">Главная</a>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_114_296)">
+                            <path d="M6.44238 12.4425L9.87738 9L6.44238 5.5575L7.49988 4.5L11.9999 9L7.49988 13.5L6.44238 12.4425Z" fill="#525252"/>
+                        </g>
+                        <defs><clippath id="clip0_114_296"><rect width="18" height="18" fill="white"/></clippath></defs>
+                    </svg>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="blog.html">Блог</a>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_114_299)">
+                            <path d="M6.44238 12.4425L9.87738 9L6.44238 5.5575L7.49988 4.5L11.9999 9L7.49988 13.5L6.44238 12.4425Z" fill="#525252"/>
+                        </g>
+                        <defs><clippath id="clip0_114_299"><rect width="18" height="18" fill="white"/></clippath></defs>
+                    </svg>
+                </li>
+                <li class="breadcrumbs__item breadcrumbs__item_active">
+                </li>
+            </ul>
 
-                        <div class="banner__timer timer" role="timer" data-timer-deadline="2023/09/22 12:00">
-                        </div>
-                    </a>
-                </div>
-            </div>      
-        </section>
+            <article class="article__wrapper">
+            </article>
 
-        <section class="galery">
-            <div class="container">
-                <h2 class="visually-hidden">Каталог товаров магазина</h2>
-                <ul class="galery__list">
-                    <li class="galery__item galery__item_type_book book"> 
-                        <a class="galery__link book__link" href="#">
-                            <p class="book__caption">Книга 
-                                <span class="book__caption-font-regular">- лучший подарок</span>
-                            </p>
+            <aside class="add">
+                <ul class="add__list">
+                    <li class="add__item" style="background-image: url(./imgs/turkey.jpg);">
+                        <a class="add__link" href="#">
+                            <p class="add__title">Горящие туры в Стамбул от 20&nbsp;000 руб.</p>
+                            <p class="add__slogan">Окунись в настоящую восточную сказку</p>
                         </a>
                     </li>
-                    <li class="galery__item galery__item_type_discount-time discount-time"> 
-                        <a class="galery__link discount-time__link" href="#">
-                            <p class="discount-time__caption">Время скидок!</p>
-                            <p class="galery__sticker discount-time__sticker">-25%</p>
-                        </a>
-                    </li>
-                    <li class="galery__item galery__item_type_boots boots"> 
-                        <a class="galery__link boots__link" href="#" aria-label="обувь">
-                            <p class="galery__sticker boots__sticker">-40%</p>
-                        </a>
-                    </li>
-                    <li class="galery__item galery__item_type_second-pair second-pair">
-                        <a class="galery__link second-pair__link" href="#">
-                            <p class="second-pair__caption">Вторая пара кроссовок 
-                                <span class="second-pair__caption-bold">в&nbsp;подарок!</span>
-                            </p>                            
-                        </a>                            
-                    </li>
-                    <li class="galery__item galery__item_type_presents presents"> 
-                        <a class="galery__link presents__link" href="#">
-                            <p class="presents__caption">Идеи новогодних подарков</p>
-                        </a>
-                    </li>
-                    <li class="galery__item galery__item_type_december-offer december-offer"> 
-                        <a class="galery__link december-offer__link" href="#">
-                            <p class="december-offer__caption">Выгодно в декабре!</p>
-                            <p class="galery__sticker december-offer__sticker">-15%</p>
-                        </a>
-                    </li>
-                    <li class="galery__item galery__item_type_decorations decorations"> 
-                        <a class="galery__link decorations__link" href="#">
-                            <p class="decorations__caption">новогодние украшения</p>
-                        </a>
-                    </li>
-                    <li class="galery__item galery__item_type_dresses dresses">
-                        <a class="galery__link dresses__link" href="#" aria-label="женская одежда">
-                            <p class="galery__sticker dresses__sticker">-55%</p>
-                        </a>
-                    </li>
-                    <li class="galery__item galery__item_type_cleaning-products cleaning-products"> 
-                        <a class="galery__link cleaning-products__link" href="#">
-                            <p class="galery__sticker cleaning-products__sticker">-25%</p>
-                            <p class="cleaning-products__caption">На бытовую химию</p>
-                        </a>
-                    </li>
-                    <li class="galery__item galery__item_type_christmas-toys christmas-toys"> 
-                        <a class="galery__link christmas-toys__link" href="#" aria-label="новогодние шары"></a>
-                    </li>
-                </ul>                
-            </div>
-        </section>
-
-        <section class="discount">
-            <div class="container">
-                <h2 class="discount__title">Это выгодно!</h2>
-                <ul class="discount__list">
-                    <li class="discount__item">
-                        <a class="discount__link" href="#">
-                            <div class="discount__img">
-                                <img src="./imgs/t-shirts.jpg" alt="Пара футболок">
-                                <span class="discount__sticker" aria-label="скидка">-50%</span>
-                            </div>
-                            <div class="discount__prices">
-                                <p class="discount__price-current" aria-label="цена со скидкой">1299 ₽</p>
-                                <p class="discount__price-full" aria-label="цена без скидки">2598 ₽</p>
-                            </div>
-                            <p class="discount__item-name">Пара футболок</p>
-                        </a>
-                    </li>
-                    <li class="discount__item">
-                        <a class="discount__link" href="#">
-                            <div class="discount__img">
-                                <img src="./imgs/sneakers.jpg" alt="Кроссовки">
-                                <span class="discount__sticker" aria-label="скидка">-65%</span>
-                            </div>
-                            <div class="discount__prices">
-                                <p class="discount__price-current" aria-label="цена со скидкой">2099 ₽</p>
-                                <p class="discount__price-full" aria-label="цена без скидки">5938 ₽</p>
-                            </div>
-                            <p class="discount__item-name">Кроссовки</p>
-                        </a>
-                    </li>
-                    <li class="discount__item">
-                        <a class="discount__link" href="#">
-                            <div class="discount__img">
-                                <img src="./imgs/bed-sheets.jpg" alt="Постельное белье">
-                                <span class="discount__sticker" aria-label="скидка">-10%</span>
-                            </div>
-                            <div class="discount__prices">
-                                <p class="discount__price-current" aria-label="цена со скидкой">3902 ₽</p>
-                                <p class="discount__price-full" aria-label="цена без скидки">4490 ₽</p>
-                            </div>
-                            <p class="discount__item-name">Постельное белье</p>
-                        </a>
-                    </li>
-                    <li class="discount__item">
-                        <a class="discount__link" href="#">
-                            <div class="discount__img">
-                                <img src="./imgs/hair_dryer.jpg" alt="Фен">
-                                <span class="discount__sticker" aria-label="скидка">-50%</span>
-                            </div>
-                            <div class="discount__prices">
-                                <p class="discount__price-current" aria-label="цена со скидкой">2999 ₽</p>
-                                <p class="discount__price-full" aria-label="цена без скидки">6030 ₽</p>
-                            </div>
-                            <p class="discount__item-name">Фен</p>
-                        </a>
-                    </li>
-                    <li class="discount__item">
-                        <a class="discount__link" href="#">
-                            <div class="discount__img">
-                                <img src="./imgs/bed-sheets.jpg" alt="Постельное белье">
-                                <span class="discount__sticker" aria-label="скидка">-10%</span>
-                            </div>
-                            <div class="discount__prices">
-                                <p class="discount__price-current" aria-label="цена со скидкой">3902 ₽</p>
-                                <p class="discount__price-full" aria-label="цена без скидки">4490 ₽</p>
-                            </div>
-                            <p class="discount__item-name">Постельное белье</p>
-                        </a>
-                    </li>
-                    <li class="discount__item">
-                        <a class="discount__link" href="#">
-                            <div class="discount__img">
-                                <img src="./imgs/hair_dryer.jpg" alt="Фен">
-                                <span class="discount__sticker" aria-label="скидка">-50%</span>
-                            </div>
-                            <div class="discount__prices">
-                                <p class="discount__price-current" aria-label="цена со скидкой">2999 ₽</p>
-                                <p class="discount__price-full" aria-label="цена без скидки">6030 ₽</p>
-                            </div>
-                            <p class="discount__item-name">Фен</p>
-                        </a>
-                    </li>
-                    <li class="discount__item">
-                        <a class="discount__link" href="#">
-                            <div class="discount__img">
-                                <img src="./imgs/mittens.jpg" alt="Варежки-мишки">
-                                <span class="discount__sticker" aria-label="скидка">-30%</span>
-                            </div>
-                            <div class="discount__prices">
-                                <p class="discount__price-current" aria-label="цена со скидкой">540 ₽</p>
-                                <p class="discount__price-full" aria-label="цена без скидки">890 ₽</p>
-                            </div>
-                            <p class="discount__item-name">Варежки-мишки</p>
-                        </a>
-                    </li>
-                    <li class="discount__item">
-                        <a class="discount__link" href="#">
-                            <div class="discount__img">
-                                <img src="./imgs/t-shirts.jpg" alt="Пара футболок">
-                                <span class="discount__sticker" aria-label="скидка">-50%</span>
-                            </div>
-                            <div class="discount__prices">
-                                <p class="discount__price-current" aria-label="цена со скидкой">1299 ₽</p>
-                                <p class="discount__price-full" aria-label="цена без скидки">2598 ₽</p>
-                            </div>
-                            <p class="discount__item-name">Пара футболок</p>
+                    <li class="add__item">
+                        <a class="add__link" href="#" style="background-image: url(./imgs/reno.jpg);">
+                            <p class="add__title">Новый RENAULT DUSTER</p>
+                            <p class="add__slogan">Легендарный внедорожник в новом дизайне</p>
                         </a>
                     </li>
                 </ul>
-            </div>
-        </section>
+            </aside>
+        </div>
     </main>
+
     <footer class="footer">
         <div class="container footer__container">
             <img class="footer__logo" src="./imgs/footer-logo.svg" alt="логотип интернет-магазина ShopOnline" width="190" height="419">
@@ -283,7 +139,7 @@
                     </li>
                 </ul>                
             </div>
-            <div class="footer__group footer__group_contacts contacts" id="contacts">
+            <div class="footer__group footer__group_contacts contacts">
                 <h3 class="footer__title">Контакты</h3>
                 <ul class="footer__list footer__list_contacts">
                     <li class="footer__item footer__item_contacts">
@@ -343,69 +199,5 @@
             </div>
         </div>
     </footer>
-    <div class="modal">
-        <div class="container modal__container">
-            <div class="modal__group modal__group_catalog catalog">
-                <h3 class="modal__title">Каталог</h3>
-                <ul class="modal__list modal__list_catalog">
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Смартфоны</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Ноутбуки</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Ювелирные изделия</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Одежда</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Бытовая техника</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Бытовая химия</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Книги и журналы</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Домашний текстиль</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Электроника</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Косметика</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="modal__group modal__group_customers customers">
-                <h3 class="modal__title">Покупателям</h3>
-                <ul class="modal__list modal__list_customers">
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Оплата заказа</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Условия доставки</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Условия возврата заказа</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="blog.html">Блог</a>
-                    </li>
-                </ul>                
-            </div>
-            <div class="modal__group modal__group_contacts contacts">
-                <h3 class="modal__title">Связаться с нами</h3>
-                <ul class="modal__list modal__list_contacts">
-                    <li class="modal__item modal__item_contacts">
-                        <a class="modal__link modal__link_contacts" href="#contacts" aria-label="контакты">Контакты</a>
-                    </li>
-                </ul>                
-            </div>
-        </div>
-    </div>
 </body>
 </html>

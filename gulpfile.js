@@ -6,6 +6,13 @@ import {deleteSync} from 'del';
 
 const sass = gulpSass(sassPkg);
 
+// const allJS = [
+//     'src/assets/script/modules/const.js',
+//     'src/assets/script/modules/controls.js',
+//     'src/assets/script/modules/renderElements.js',
+//     'src/assets/script/modules/serviceAPI.js',
+// ];
+
 // задачи
 
 // обработка html файлов
@@ -48,14 +55,14 @@ export const server = () => {
     browserSync.init({
         ui: false,
         notify: false,
-        // tunnel: true,
+        tunnel: true,
         server: {
             baseDir: 'dist',
         },
     });
 
     gulp.watch('./src/**/*.html', html);
-    gulp.watch('./src/assets/scss/*.scss', style);
+    gulp.watch('./src/assets/scss/**/*.scss', style);
     gulp.watch('./src/assets/script/**/*.js', js);
     gulp.watch('./src/assets/imgs/*', images);
     gulp.watch('./src/assets/fonts/* ', fonts);
