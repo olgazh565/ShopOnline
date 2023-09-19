@@ -503,12 +503,20 @@ fieldset {
   font-size: 22px;
   line-height: 150%;
   border-radius: 10px;
-  padding: 9px 28px 12px 61px;
+  padding: 11px 28px 10px 61px;
   background-image: url("../imgs/menu-open.svg");
   background-repeat: no-repeat;
   background-position: center left 30px;
   background-color: #3670C7;
   border: none;
+  outline: 0;
+  transition: background-color 0.2s ease-out;
+}
+.header__menu-button:hover, .header__menu-button:active {
+  background-color: #5D92E0;
+}
+.header__menu-button:focus-visible {
+  background-color: #3B65A5;
 }
 @media (max-width: 1500px) {
   .header__menu-button {
@@ -643,6 +651,14 @@ fieldset {
   border-radius: 30px;
   height: 100%;
   border: 0;
+  outline: 0;
+  transition: background-color 0.2s ease-out;
+}
+.search__button:hover, .search__button:active {
+  background-color: #5D92E0;
+}
+.search__button:focus-visible {
+  background-color: #3B65A5;
 }
 @media (max-width: 850px) {
   .search__button {
@@ -688,7 +704,7 @@ fieldset {
   }
 }
 .user__link_type_basket::before {
-  background-image: url("../imgs/shopping_cart.svg");
+  background-image: url("../imgs/shopping-cart.svg");
 }
 @media (max-width: 850px) {
   .user__link_type_basket::before {
@@ -743,6 +759,7 @@ fieldset {
 .modal.show-modal {
   visibility: visible;
   opacity: 1;
+  transition: all 0.2s ease-out;
 }
 .modal__container {
   padding: 52px 30px 92px;
@@ -808,6 +825,9 @@ fieldset {
 }
 .modal__item {
   margin-bottom: 20px;
+}
+.modal__item:hover {
+  color: #3670C7;
 }
 @media (max-width: 850px) {
   .modal__item {
@@ -1907,10 +1927,15 @@ fieldset {
   padding: 7px 0;
   font-weight: 700;
   transition: 0.3s ease-out;
+  outline: 0;
 }
 .pagination__page:hover {
   color: #3670C7;
   border: 2px solid #3670C7;
+}
+.pagination__page:focus-visible {
+  color: #3B65A5;
+  border: 2px solid #3B65A5;
 }
 .pagination__page.is-active {
   color: #3670C7;
@@ -1928,9 +1953,13 @@ fieldset {
   border: none;
   background-color: transparent;
   transition: 0.3s ease-out;
+  outline: 0;
 }
 .pagination__right:hover, .pagination__left:hover {
   color: #3670C7;
+}
+.pagination__right:focus-visible, .pagination__left:focus-visible {
+  color: #3B65A5;
 }
 .pagination__right.is-active, .pagination__left.is-active {
   color: #3670C7;
@@ -1938,6 +1967,9 @@ fieldset {
 .pagination__right.is-disabled, .pagination__left.is-disabled {
   opacity: 0.65;
   pointer-events: none;
+}
+.pagination__right.is-disabled:focus-visible, .pagination__left.is-disabled:focus-visible {
+  color: #8F8F8F;
 }
 @media (max-width: 850px) {
   .pagination__right, .pagination__left {

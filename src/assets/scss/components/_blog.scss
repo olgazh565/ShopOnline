@@ -195,10 +195,16 @@
         padding: 7px 0;
         font-weight: 700;
         transition: .3s ease-out;
+        outline: 0;
 
         &:hover {
             color: $blue-color;
             border: 2px solid $blue-color;
+        }
+
+        &:focus-visible {
+            color: #3B65A5;
+            border: 2px solid #3B65A5;
         }
 
         &.is-active {
@@ -219,18 +225,27 @@
         border: none;
         background-color: transparent;
         transition: .3s ease-out;
+        outline: 0;
 
         &:hover {
             color: $blue-color;
         }
 
+        &:focus-visible {
+            color: #3B65A5;
+        }
+
         &.is-active {
-            color: $blue-color;
+            color: $blue-color;            
         }
 
         &.is-disabled {
             opacity: .65;
             pointer-events: none;
+
+            &:focus-visible {
+                color: #8F8F8F;
+            }
         }
 
         @include md {

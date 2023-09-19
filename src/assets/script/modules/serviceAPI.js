@@ -9,12 +9,12 @@ export const getArticles = async (
     const params = new URLSearchParams(window.location.search);
 
     if (params.has('id')) return;
+    if (window.location.pathname !== '/blog.html') return;
 
     const pageNum = params.get('page') ? params.get('page') : 1;
 
     try {
         const result = await fetch(`${API_URL}/posts?page=${pageNum}`);
-        console.log('result: ', result);
         const {data, meta: {pagination}} = await result.json();
         console.log('data: ', data);
 
@@ -37,6 +37,7 @@ export const getArticle = async (renderArticle) => {
     try {
         const result = await fetch(`${API_URL}/posts/${articleId}`);
         const {data} = await result.json();
+        console.log('data: ', data);
 
         renderArticle(data);
     } catch (err) {

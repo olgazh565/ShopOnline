@@ -35,7 +35,7 @@ export const renderArticles = (data) => {
         return articleItem;
     });
 
-    articlesList.append(...articles);
+    articlesList && articlesList.append(...articles);
 };
 
 export const renderPagination = ({pages: pagesTotal, page}) => {
@@ -63,7 +63,8 @@ export const renderPagination = ({pages: pagesTotal, page}) => {
             break;
     }
 
-    paginationGroup.innerHTML = `
+    if (paginationGroup) {
+        paginationGroup.innerHTML = `
         <a class="pagination__left" href="blog.html?page=${page - 1}">
             <svg width="37" height="37" viewBox="0 0 37 37" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_0_255)">
@@ -106,6 +107,7 @@ export const renderPagination = ({pages: pagesTotal, page}) => {
             </svg>
         </a>
     `;
+    }
 };
 
 export const renderArticle = async ({user_id: userId, title, body}) => {
@@ -155,5 +157,80 @@ export const renderArticle = async ({user_id: userId, title, body}) => {
             </div>
         </div>
     `;
+};
+
+export const renderModal = () => {
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+
+    modal.innerHTML = `
+        <div class="container modal__container">
+            <div class="modal__group modal__group_catalog catalog">
+                <h3 class="modal__title">Каталог</h3>
+                <ul class="modal__list modal__list_catalog">
+                    <li class="modal__item">
+                        <a class="modal__link" href="#">Смартфоны</a>
+                    </li>
+                    <li class="modal__item">
+                        <a class="modal__link" href="#">Ноутбуки</a>
+                    </li>
+                    <li class="modal__item">
+                        <a class="modal__link" href="#">Ювелирные изделия</a>
+                    </li>
+                    <li class="modal__item">
+                        <a class="modal__link" href="#">Одежда</a>
+                    </li>
+                    <li class="modal__item">
+                        <a class="modal__link" href="#">Бытовая техника</a>
+                    </li>
+                    <li class="modal__item">
+                        <a class="modal__link" href="#">Бытовая химия</a>
+                    </li>
+                    <li class="modal__item">
+                        <a class="modal__link" href="#">Книги и журналы</a>
+                    </li>
+                    <li class="modal__item">
+                        <a class="modal__link" href="#">Домашний текстиль</a>
+                    </li>
+                    <li class="modal__item">
+                        <a class="modal__link" href="#">Электроника</a>
+                    </li>
+                    <li class="modal__item">
+                        <a class="modal__link" href="#">Косметика</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal__group modal__group_customers customers">
+                <h3 class="modal__title">Покупателям</h3>
+                <ul class="modal__list modal__list_customers">
+                    <li class="modal__item">
+                        <a class="modal__link" href="#">Оплата заказа</a>
+                    </li>
+                    <li class="modal__item">
+                        <a class="modal__link" href="#">Условия доставки</a>
+                    </li>
+                    <li class="modal__item">
+                        <a class="modal__link" href="#">
+                            Условия возврата заказа
+                        </a>
+                    </li>
+                    <li class="modal__item">
+                        <a class="modal__link" href="blog.html">Блог</a>
+                    </li>
+                </ul>                
+            </div>
+            <div class="modal__group modal__group_contacts contacts">
+                <h3 class="modal__title">Связаться с нами</h3>
+                <ul class="modal__list modal__list_contacts">
+                    <li class="modal__item modal__item_contacts">
+                        <a class="modal__link modal__link_contacts" 
+                            href="#contacts" aria-label="контакты">Контакты</a>
+                    </li>
+                </ul>                
+            </div>
+        </div>
+    `;
+
+    return modal;
 };
 

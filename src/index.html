@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopOnline</title>
 
-    <link rel="stylesheet" href="./css/index.css">
     <link rel="icon" type="image/svg+xml" href="./imgs/favorite.svg">
-    <link rel="preload" href="./fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./fonts/lato-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Lato-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Lato-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="./css/index.css">
     <script type="module" src="./js/index.js"></script>
 
 </head>
 <body>
     <header class="header">
         <div class="container header__container">
-            <img class="header__logo" src="./imgs/logo.svg" alt="логотип интернет-магазина ShopOnline">
+            <img class="header__logo" src="./imgs/logo.svg" alt="логотип интернет-магазина ShopOnline" width="190" height="41">
             <button class="header__menu-button" type="button">Меню</button>                
 
             <form class="header__search search" action="https://jsonplaceholder.typicode.com/posts" method="POST" target="_blank">
@@ -123,7 +123,7 @@
                     <li class="discount__item">
                         <a class="discount__link" href="#">
                             <div class="discount__img">
-                                <img src="./imgs/t-shirts.jpg" alt="Пара футболок">
+                                <img src="./imgs/t-shirts.jpg" alt="Пара футболок" width="420" height="295" loading="lazy">
                                 <span class="discount__sticker" aria-label="скидка">-50%</span>
                             </div>
                             <div class="discount__prices">
@@ -136,7 +136,7 @@
                     <li class="discount__item">
                         <a class="discount__link" href="#">
                             <div class="discount__img">
-                                <img src="./imgs/sneakers.jpg" alt="Кроссовки">
+                                <img src="./imgs/sneakers.jpg" alt="Кроссовки" width="420" height="295" loading="lazy">
                                 <span class="discount__sticker" aria-label="скидка">-65%</span>
                             </div>
                             <div class="discount__prices">
@@ -149,7 +149,7 @@
                     <li class="discount__item">
                         <a class="discount__link" href="#">
                             <div class="discount__img">
-                                <img src="./imgs/bed-sheets.jpg" alt="Постельное белье">
+                                <img src="./imgs/bed-sheets.jpg" alt="Постельное белье" width="420" height="295" loading="lazy">
                                 <span class="discount__sticker" aria-label="скидка">-10%</span>
                             </div>
                             <div class="discount__prices">
@@ -162,7 +162,7 @@
                     <li class="discount__item">
                         <a class="discount__link" href="#">
                             <div class="discount__img">
-                                <img src="./imgs/hair_dryer.jpg" alt="Фен">
+                                <img src="./imgs/hair_dryer.jpg" alt="Фен" width="420" height="295" loading="lazy">
                                 <span class="discount__sticker" aria-label="скидка">-50%</span>
                             </div>
                             <div class="discount__prices">
@@ -175,7 +175,7 @@
                     <li class="discount__item">
                         <a class="discount__link" href="#">
                             <div class="discount__img">
-                                <img src="./imgs/bed-sheets.jpg" alt="Постельное белье">
+                                <img src="./imgs/bed-sheets.jpg" alt="Постельное белье" width="420" height="295" loading="lazy">
                                 <span class="discount__sticker" aria-label="скидка">-10%</span>
                             </div>
                             <div class="discount__prices">
@@ -188,7 +188,7 @@
                     <li class="discount__item">
                         <a class="discount__link" href="#">
                             <div class="discount__img">
-                                <img src="./imgs/hair_dryer.jpg" alt="Фен">
+                                <img src="./imgs/hair_dryer.jpg" alt="Фен" width="420" height="295" loading="lazy">
                                 <span class="discount__sticker" aria-label="скидка">-50%</span>
                             </div>
                             <div class="discount__prices">
@@ -201,7 +201,7 @@
                     <li class="discount__item">
                         <a class="discount__link" href="#">
                             <div class="discount__img">
-                                <img src="./imgs/mittens.jpg" alt="Варежки-мишки">
+                                <img src="./imgs/mittens.jpg" alt="Варежки-мишки" width="420" height="295" loading="lazy">
                                 <span class="discount__sticker" aria-label="скидка">-30%</span>
                             </div>
                             <div class="discount__prices">
@@ -214,7 +214,7 @@
                     <li class="discount__item">
                         <a class="discount__link" href="#">
                             <div class="discount__img">
-                                <img src="./imgs/t-shirts.jpg" alt="Пара футболок">
+                                <img src="./imgs/t-shirts.jpg" alt="Пара футболок" width="420" height="295" loading="lazy">
                                 <span class="discount__sticker" aria-label="скидка">-50%</span>
                             </div>
                             <div class="discount__prices">
@@ -230,7 +230,7 @@
     </main>
     <footer class="footer">
         <div class="container footer__container">
-            <img class="footer__logo" src="./imgs/footer-logo.svg" alt="логотип интернет-магазина ShopOnline" width="190" height="419">
+            <img class="footer__logo" src="./imgs/footer-logo.svg" alt="логотип интернет-магазина ShopOnline" width="190" height="41">
             <div class="footer__group footer__group_catalog catalog">
                 <h3 class="footer__title">Каталог</h3>
                 <ul class="footer__list footer__list_catalog">
@@ -343,69 +343,5 @@
             </div>
         </div>
     </footer>
-    <div class="modal">
-        <div class="container modal__container">
-            <div class="modal__group modal__group_catalog catalog">
-                <h3 class="modal__title">Каталог</h3>
-                <ul class="modal__list modal__list_catalog">
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Смартфоны</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Ноутбуки</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Ювелирные изделия</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Одежда</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Бытовая техника</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Бытовая химия</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Книги и журналы</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Домашний текстиль</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Электроника</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Косметика</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="modal__group modal__group_customers customers">
-                <h3 class="modal__title">Покупателям</h3>
-                <ul class="modal__list modal__list_customers">
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Оплата заказа</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Условия доставки</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Условия возврата заказа</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="blog.html">Блог</a>
-                    </li>
-                </ul>                
-            </div>
-            <div class="modal__group modal__group_contacts contacts">
-                <h3 class="modal__title">Связаться с нами</h3>
-                <ul class="modal__list modal__list_contacts">
-                    <li class="modal__item modal__item_contacts">
-                        <a class="modal__link modal__link_contacts" href="#contacts" aria-label="контакты">Контакты</a>
-                    </li>
-                </ul>                
-            </div>
-        </div>
-    </div>
 </body>
 </html>

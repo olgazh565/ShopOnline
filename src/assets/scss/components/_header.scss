@@ -78,7 +78,7 @@
         font-size: 22px;
         line-height: 150%;
         border-radius: 10px;
-        padding: 9px 28px 12px 61px;
+        padding: 11px 28px 10px 61px;
         background: {
             image: url("../imgs/menu-open.svg");
             repeat: no-repeat;
@@ -86,6 +86,17 @@
             color: $blue-color;
         }
         border: none;
+        outline: 0;
+        transition: background-color 0.2s ease-out;
+
+        &:hover,
+        &:active {
+            background-color: #5D92E0;
+        }
+
+        &:focus-visible {
+            background-color: #3B65A5;
+        }
 
         @media (max-width: 1500px) {
             justify-self: start;
@@ -203,6 +214,17 @@
         border-radius: 30px;
         height: 100%;
         border: 0;
+        outline: 0;
+        transition: background-color 0.2s ease-out;
+
+        &:hover,
+        &:active {
+            background-color: #5D92E0;
+        }
+
+        &:focus-visible {
+            background-color: #3B65A5;
+        }
 
         @include md {
             background-size: 22px;
@@ -248,7 +270,7 @@
 
         &_type_basket {
             &::before {
-                background-image: url("../imgs/shopping_cart.svg");  
+                background-image: url("../imgs/shopping-cart.svg");  
                 
                 @include md {
                     background-size: 29px;
@@ -304,6 +326,7 @@
     &.show-modal {
         visibility: visible;
         opacity: 1;
+        transition: all 0.2s ease-out;
     }
 
     &__container {
@@ -364,6 +387,10 @@
 
     &__item {
         margin-bottom: 20px;
+
+        &:hover {
+            color: $blue-color;
+        }
 
         @include md {
             margin-bottom: 10px;
