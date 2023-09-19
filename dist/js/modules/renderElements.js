@@ -10,7 +10,7 @@ export const renderArticles = (data) => {
         articleItem.innerHTML = `
             <a class="blog__link" href="article.html?id=${id}">
                 <img class="blog__image" src="../imgs/no-image.jpg"
-                    alt="фото">
+                    alt="фото" width="195" height="195">
                 <div class="blog__info">
                     <p class="blog__title" title="${title}">
                         ${title}
