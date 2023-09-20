@@ -51,8 +51,8 @@
             background-image: linear-gradient(181.33deg, rgba(0, 0, 0, 0) 9.23%, rgba(0, 0, 0, 0.2) 98.87%), 
                             url('../imgs/book-full.jpg');
             background-image: image-set(
-                url('../imgs/book-full.avif') 1x,
-                url('../imgs/book-full.webp') 1x,
+                url('../imgs/book-full.avif') type("image/avif") 1x,
+                url('../imgs/book-full.webp') type("image/webp") 1x,
                 url('../imgs/book-full.jpg') 1x
             );
             grid-column: 1 / 2;
@@ -72,8 +72,8 @@
             background-image: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%), 
                             url('../imgs/discount-time-full.jpg');
             background-image: image-set(
-                url('../imgs/discount-time-full.avif') 1x,
-                url('../imgs/discount-time-full.webp') 1x,
+                url('../imgs/discount-time-full.avif') type("image/avif") 1x,
+                url('../imgs/discount-time-full.webp') type("image/webp") 1x,
                 url('../imgs/discount-time-full.jpg') 1x
             );                
             grid-column: 2 / 3;
@@ -93,8 +93,8 @@
             background-image: linear-gradient(180.99deg, rgba(0, 0, 0, 0) 8.18%, rgba(0, 0, 0, 0.2) 99.15%), 
                             url('../imgs/boots-full.jpg');
             background-image: image-set(
-                url('../imgs/boots-full.avif') 1x,
-                url('../imgs/boots-full.webp') 1x,
+                url('../imgs/boots-full.avif') type("image/avif") 1x,
+                url('../imgs/boots-full.webp') type("image/webp") 1x,
                 url('../imgs/boots-full.jpg') 1x
             );
             grid-column: 1 / 3;
@@ -118,8 +118,8 @@
             background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%),
                             url('../imgs/second-pair-full.jpg');
             background-image: image-set(
-                url('../imgs/second-pair-full.avif') 1x,
-                url('../imgs/second-pair-full.webp') 1x,
+                url('../imgs/second-pair-full.avif') type("image/avif") 1x,
+                url('../imgs/second-pair-full.webp') type("image/webp") 1x,
                 url('../imgs/second-pair-full.jpg') 1x
             );
             grid-column: 3 / 5;
@@ -146,8 +146,8 @@
             background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 7.46%, rgba(0, 0, 0, 0.2) 100%), 
                             url('../imgs/presents-full.jpg');
             background-image: image-set(
-                url('../imgs/presents-full.avif') 1x,
-                url('../imgs/presents-full.webp') 1x,
+                url('../imgs/presents-full.avif') type("image/avif") 1x,
+                url('../imgs/presents-full.webp') type("image/webp") 1x,
                 url('../imgs/presents-full.jpg') 1x
             );
             grid-column: 5 / 7;
@@ -171,8 +171,8 @@
             background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 12.28%, rgba(0, 0, 0, 0.2) 100%), 
                             url('../imgs/december-offer-full.jpg');
             background-image: image-set(
-                url('../imgs/december-offer-full.avif') 1x,
-                url('../imgs/december-offer-full.webp') 1x,
+                url('../imgs/december-offer-full.avif') type("image/avif") 1x,
+                url('../imgs/december-offer-full.webp') type("image/webp") 1x,
                 url('../imgs/december-offer-full.jpg') 1x
             );
             grid-column: 5 / 7;
@@ -196,8 +196,8 @@
             background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), 
                             url('../imgs/2022-full.jpg') bottom -70px center;
             background-image: image-set(
-                url('../imgs/2022-full.avif') 1x,
-                url('../imgs/2022-full.webp') 1x,
+                url('../imgs/2022-full.avif') type("image/avif") 1x,
+                url('../imgs/2022-full.webp') type("image/webp") 1x,
                 url('../imgs/2022-full.jpg') 1x
             );
             grid-column: 1 / 5;
@@ -223,8 +223,8 @@
             background-image: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%),
                             url('../imgs/red-dress-full.jpg');
             background-image: image-set(
-                url('../imgs/red-dress-full.avif') 1x,
-                url('../imgs/red-dress-full.webp') 1x,
+                url('../imgs/red-dress-full.avif') type("image/avif") 1x,
+                url('../imgs/red-dress-full.webp') type("image/webp") 1x,
                 url('../imgs/red-dress-full.jpg') 1x
             );
             grid-column: 5 / 6;
@@ -249,8 +249,8 @@
             background-image: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%), 
                             url('../imgs/cleaning-products-full.jpg');
             background-image: image-set(
-                url('../imgs/cleaning-products-full.avif') 1x,
-                url('../imgs/cleaning-products-full.webp') 1x,
+                url('../imgs/cleaning-products-full.avif') type("image/avif") 1x,
+                url('../imgs/cleaning-products-full.webp') type("image/webp") 1x,
                 url('../imgs/cleaning-products-full.jpg') 1x
             );
             grid-column: 6 / 7;
@@ -274,8 +274,8 @@
             background-image: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%), 
                             url('../imgs/christmas-toys.jpg');
             background-image: image-set(
-                url('../imgs/christmas-toys.avif') 1x,
-                url('../imgs/christmas-toys.webp') 1x,
+                url('../imgs/christmas-toys.avif') type("image/avif") 1x,
+                url('../imgs/christmas-toys.webp') type("image/webp") 1x,
                 url('../imgs/christmas-toys.jpg') 1x
             );
             grid-column: 6 / 7;

@@ -6,10 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopOnline</title>
 
-    <link rel="icon" type="image/svg+xml" href="./imgs/favorite.svg">
+    <link rel="icon" type="image/svg+xml" href="./imgs/shopping-cart.svg">
     <link rel="preload" href="./fonts/Lato-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/Lato-700.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="./css/index.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const createLink = url => {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = url;
+                document.head.append(link);
+            };
+            createLink('./css/index.css');
+        });
+    </script>
     <script type="module" src="./js/index.js"></script>
 
 </head>
@@ -124,8 +135,11 @@
                         <a class="discount__link" href="#">
                             <div class="discount__img">
                                 <picture>
-                                    <source srcset="./imgs/t-shirts.avif" type="image/avif">
+                                    <source media="(max-width: 600px)" srcset="./imgs/t-shirts@mob.avif" type="image/avif">
+                                    <source media="(max-width: 600px)" srcset="./imgs/t-shirts@mob.webp" type="image/webp">
+                                    <source media="(max-width: 600px)" srcset="./imgs/t-shirts@mob.jpg" type="image/jpeg">                                    
                                     <source srcset="./imgs/t-shirts.webp" type="image/webp">                                    
+                                    <source srcset="./imgs/t-shirts.webp" type="image/jpg">                                    
                                     <img src="./imgs/t-shirts.jpg" alt="Пара футболок" width="420" height="295" loading="lazy">
                                 </picture>
                                 
@@ -142,6 +156,9 @@
                         <a class="discount__link" href="#">
                             <div class="discount__img">
                                 <picture>
+                                    <source media="(max-width: 600px)" srcset="./imgs/sneakers@mob.avif" type="image/avif">
+                                    <source media="(max-width: 600px)" srcset="./imgs/sneakers@mob.webp" type="image/webp">
+                                    <source media="(max-width: 600px)" srcset="./imgs/sneakers@mob.jpg" type="image/jpeg"> 
                                     <source srcset="./imgs/sneakers.avif" type="image/avif">
                                     <source srcset="./imgs/sneakers.webp" type="image/webp"> 
                                     <img src="./imgs/sneakers.jpg" alt="Кроссовки" width="420" height="295" loading="lazy">
@@ -159,6 +176,9 @@
                         <a class="discount__link" href="#">
                             <div class="discount__img">
                                 <picture>
+                                    <source media="(max-width: 600px)" srcset="./imgs/bed-sheets@mob.avif" type="image/avif">
+                                    <source media="(max-width: 600px)" srcset="./imgs/bed-sheets@mob.webp" type="image/webp">
+                                    <source media="(max-width: 600px)" srcset="./imgs/bed-sheets@mob.jpg" type="image/jpeg"> 
                                     <source srcset="./imgs/bed-sheets.avif" type="image/avif">
                                     <source srcset="./imgs/bed-sheets.webp" type="image/webp"> 
                                     <img src="./imgs/bed-sheets.jpg" alt="Постельное белье" width="420" height="295" loading="lazy">
@@ -176,6 +196,9 @@
                         <a class="discount__link" href="#">
                             <div class="discount__img">
                                 <picture>
+                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.avif" type="image/avif">
+                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.webp" type="image/webpf">
+                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.jpg" type="image/jpeg"> 
                                     <source srcset="./imgs/hair_dryer.avif" type="image/avif">
                                     <source srcset="./imgs/hair_dryer.webp" type="image/webp">
                                     <img src="./imgs/hair_dryer.jpg" alt="Фен" width="420" height="295" loading="lazy">
@@ -193,6 +216,9 @@
                         <a class="discount__link" href="#">
                             <div class="discount__img">
                                 <picture>
+                                    <source media="(max-width: 600px)" srcset="./imgs/bed-sheets@mob.avif" type="image/avif">
+                                    <source media="(max-width: 600px)" srcset="./imgs/bed-sheets@mob.webp" type="image/webpf">
+                                    <source media="(max-width: 600px)" srcset="./imgs/bed-sheets@mob.jpg" type="image/jpeg">
                                     <source srcset="./imgs/bed-sheets.avif" type="image/avif">
                                     <source srcset="./imgs/bed-sheets.webp" type="image/webp">
                                     <img src="./imgs/bed-sheets.jpg" alt="Постельное белье" width="420" height="295" loading="lazy">
@@ -210,6 +236,9 @@
                         <a class="discount__link" href="#">
                             <div class="discount__img">
                                 <picture>
+                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.avif" type="image/avif">
+                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.webp" type="image/webpf">
+                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.jpg" type="image/jpeg">
                                     <source srcset="./imgs/hair_dryer.avif" type="image/avif">
                                     <source srcset="./imgs/hair_dryer.webp" type="image/webp">
                                     <img src="./imgs/hair_dryer.jpg" alt="Фен" width="420" height="295" loading="lazy">
@@ -227,8 +256,11 @@
                         <a class="discount__link" href="#">
                             <div class="discount__img">
                                 <picture>
+                                    <source media="(max-width: 600px)" srcset="./imgs/mittens@mob.avif" type="image/avif">
+                                    <source media="(max-width: 600px)" srcset="./imgs/mittens@mob.webp" type="image/webpf">
+                                    <source media="(max-width: 600px)" srcset="./imgs/mittens@mob.jpg" type="image/jpeg">
                                     <source srcset="./imgs/mittens.avif" type="image/avif">
-                                    <source srcset="./imgs/mittensr.webp" type="image/webp">
+                                    <source srcset="./imgs/mittens.webp" type="image/webp">
                                     <img src="./imgs/mittens.jpg" alt="Варежки-мишки" width="420" height="295" loading="lazy">
                                 </picture>
                                 <span class="discount__sticker" aria-label="скидка">-30%</span>
@@ -244,6 +276,9 @@
                         <a class="discount__link" href="#">
                             <div class="discount__img">
                                 <picture>
+                                    <source media="(max-width: 600px)" srcset="./imgs/t-shirts@mob.avif" type="image/avif">
+                                    <source media="(max-width: 600px)" srcset="./imgs/t-shirts@mob.webp" type="image/webpf">
+                                    <source media="(max-width: 600px)" srcset="./imgs/t-shirts@mob.jpg" type="image/jpeg">
                                     <source srcset="./imgs/t-shirts.avif" type="image/avif">
                                     <source srcset="./imgs/t-shirts.webp" type="image/webp">
                                     <img src="./imgs/t-shirts.jpg" alt="Пара футболок" width="420" height="295" loading="lazy">

@@ -232,21 +232,42 @@
     grid-area: addv;
     max-width: 532px;
 
-    @include lg {
-        // max-width: 964px;
-    }    
+    @include md {
+        max-width: 100%;
+    }
     @include sm {
         display: none;     
     }
 
+    &__list {
+        @include md {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }        
+    }
+
     &__item {
         background: center/cover;
+        background-image: url('../imgs/turkey.jpg');
+        background-image: image-set(
+                url('../imgs/turkey.avif') type("image/avif") 1x,
+                url('../imgs/turkey.webp') type("image/webp") 1x,
+                url('../imgs/turkey.jpg') 1x
+            );
         margin-bottom: 50px;
         max-width: 532px;
         height: 328px;
 
         &:last-child {
             margin-bottom: 0;
+            background-image: url('../imgs/reno.jpg');
+            background-image: image-set(
+                url('../imgs/reno.avif') type("image/avif") 1x,
+                url('../imgs/reno.webp') type("image/webp") 1x,
+                url('../imgs/reno.jpg') 1x
+            );
         }
 
         @include lg {
@@ -258,7 +279,7 @@
             max-width: 320px;
             height: 253px;
             margin-bottom: 0;
-            flex: 1 0 45%;
+            flex: 1 1 320px;
         }        
     }
 
@@ -298,15 +319,6 @@
         @include md {
             font-size: 14px;
         }
-    }
-
-    &__list {
-        @include md {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 10px;
-        }        
     }
 }
 

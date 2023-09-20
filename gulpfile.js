@@ -3,7 +3,6 @@ import browserSync from 'browser-sync';
 import * as sassPkg from 'sass';
 import gulpSass from 'gulp-sass';
 import {deleteSync} from 'del';
-
 import htmlmin from 'gulp-htmlmin';
 import cleanCSS from 'gulp-clean-css';
 import terser from 'gulp-terser';
@@ -11,8 +10,8 @@ import sourcemaps from 'gulp-sourcemaps';
 import gulpImg from 'gulp-image';
 import gulpWebp from 'gulp-webp';
 import gulpAvif from 'gulp-avif';
+import {stream as critical} from 'critical';
 import gulpIf from 'gulp-if';
-
 
 const sass = gulpSass(sassPkg);
 
@@ -71,6 +70,7 @@ export const images = () => gulp
             once: true,
         }));
 
+// конвертирование изображений в webp
 export const webp = () => gulp
         .src('src/assets/imgs/**/*.{jpg,jpeg,png}')
         .pipe(gulpWebp({
@@ -81,6 +81,7 @@ export const webp = () => gulp
             once: true,
         }));
 
+// конвертирование изображений в avif
 export const avif = () => gulp
         .src('src/assets/imgs/**/*.{jpg,jpeg,png}')
         .pipe(gulpAvif({
@@ -90,6 +91,19 @@ export const avif = () => gulp
         .pipe(browserSync.stream({
             once: true,
         }));
+
+// критические стили
+export const critCSS = () => gulp
+        .src('dist/*.html')
+        .pipe(critical({
+            base: 'dist/',
+            inline: true,
+            css: ['dist/css/index.css'],
+        }))
+        .on('error', err => {
+            console.error(err.message);
+        })
+        .pipe(gulp.dest('dist'));
 
 // функция копирования шрифтов
 export const fonts = () => gulp
