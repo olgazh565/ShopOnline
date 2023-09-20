@@ -9,18 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="./imgs/shopping-cart.svg">
     <link rel="preload" href="./fonts/Lato-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/Lato-700.woff2" as="font" type="font/woff2" crossorigin>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const createLink = url => {
-                const link = document.createElement('link');
-                link.rel = 'stylesheet';
-                link.href = url;
-                document.head.append(link);
-            };
-            createLink('./css/index.css');
-        });
-    </script>
+    <link rel="stylesheet" href="./css/index.css">
     <script type="module" src="./js/index.js"></script>
 
 </head>
@@ -138,8 +127,8 @@
                                     <source media="(max-width: 600px)" srcset="./imgs/t-shirts@mob.avif" type="image/avif">
                                     <source media="(max-width: 600px)" srcset="./imgs/t-shirts@mob.webp" type="image/webp">
                                     <source media="(max-width: 600px)" srcset="./imgs/t-shirts@mob.jpg" type="image/jpeg">                                    
+                                    <source srcset="./imgs/t-shirts.avif" type="image/avif">                                    
                                     <source srcset="./imgs/t-shirts.webp" type="image/webp">                                    
-                                    <source srcset="./imgs/t-shirts.webp" type="image/jpg">                                    
                                     <img src="./imgs/t-shirts.jpg" alt="Пара футболок" width="420" height="295" loading="lazy">
                                 </picture>
                                 
@@ -197,7 +186,7 @@
                             <div class="discount__img">
                                 <picture>
                                     <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.avif" type="image/avif">
-                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.webp" type="image/webpf">
+                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.webp" type="image/webp">
                                     <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.jpg" type="image/jpeg"> 
                                     <source srcset="./imgs/hair_dryer.avif" type="image/avif">
                                     <source srcset="./imgs/hair_dryer.webp" type="image/webp">
