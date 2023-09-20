@@ -57,13 +57,13 @@ export const controlModalMenu = () => {
 
         menuBtn.style.backgroundImage =
             modalMenu.classList.contains('show-modal') ?
-            'url(../imgs/menu-close.svg)' : 'url(../imgs/menu-open.svg)';
+            'url(./imgs/menu-close.svg)' : 'url(./imgs/menu-open.svg)';
     });
 
     modalMenu.addEventListener('click', ({target}) => {
         if (target.closest('.modal__link')) {
             modalMenu.classList.remove('show-modal');
-            menuBtn.style.backgroundImage = 'url(../imgs/menu-open.svg)';
+            menuBtn.style.backgroundImage = 'url(./imgs/menu-open.svg)';
         }
     });
 };

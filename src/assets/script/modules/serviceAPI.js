@@ -9,7 +9,7 @@ export const getArticles = async (
     const params = new URLSearchParams(window.location.search);
 
     if (params.has('id')) return;
-    if (window.location.pathname !== '/blog.html') return;
+    if (!window.location.pathname.includes('/blog.html')) return;
 
     const pageNum = params.get('page') ? params.get('page') : 1;
 
