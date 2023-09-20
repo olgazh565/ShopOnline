@@ -9,7 +9,7 @@ export const renderArticles = (data) => {
 
         articleItem.innerHTML = `
             <a class="blog__link" href="article.html?id=${id}">
-                <img class="blog__image" src="../imgs/no-image.jpg"
+                <img class="blog__image" src="./imgs/no-image.jpg"
                     alt="фото" width="195" height="195">
                 <div class="blog__info">
                     <p class="blog__title" title="${title}">
@@ -19,12 +19,12 @@ export const renderArticles = (data) => {
                     <div class="blog__data">
                         <div class="blog__views">
                             <img class="blog__views-icon" 
-                            src="../imgs/icons_eye.svg" alt="icon-eye">
+                            src="./imgs/icons_eye.svg" alt="icon-eye">
                             <span class="blog__views-num">1.2K</span>
                         </div>
                         <div class="blog__comments">
                             <img class="blog__comments-icon" 
-                            src="../imgs/chat.svg" alt="comments">
+                            src="./imgs/chat.svg" alt="comments">
                             <span class="blog__comments-num">0</span>
                         </div>
                     </div>
@@ -144,13 +144,13 @@ export const renderArticle = async ({user_id: userId, title, body}) => {
                 <div class="article__statistic">
                     <div class="article__views">
                         <img class="article__views-icon" 
-                            src="../imgs/icons_eye.svg" 
+                            src="./imgs/icons_eye.svg" 
                                 alt="icon-eye">
                         <span class="article__views-num">1.2K</span>
                     </div>
                     <div class="article__comments">
                         <img class="article__comments-icon" 
-                            src="../imgs/chat.svg" alt="comments">
+                            src="./imgs/chat.svg" alt="comments">
                         <span class="article__comments-num">0</span>
                     </div>
                 </div>
