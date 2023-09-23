@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopOnline-article</title>
+    <title>ShopOnline</title>
 
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" type="image/svg+xml" href="./imgs/shopping-cart.svg">
     <link rel="preload" href="./fonts/Lato-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/Lato-700.woff2" as="font" type="font/woff2" crossorigin>
-
+    <link rel="stylesheet" href="./css/index.css">
     <script type="module" src="./js/index.min.js"></script>
 </head>
-
 <body>
     <header class="header">
         <div class="container header__container">
@@ -37,51 +36,224 @@
         </div>
     </header>
 
-    <main class="article">
-        <div class="container article__container">
-            <ul class="breadcrumbs__list">
-                <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link" href="index.html">Главная</a>
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_114_296)">
-                            <path d="M6.44238 12.4425L9.87738 9L6.44238 5.5575L7.49988 4.5L11.9999 9L7.49988 13.5L6.44238 12.4425Z" fill="#525252"/>
-                        </g>
-                        <defs><clippath id="clip0_114_296"><rect width="18" height="18" fill="white"/></clippath></defs>
-                    </svg>
-                </li>
-                <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link" href="blog.html">Блог</a>
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_114_299)">
-                            <path d="M6.44238 12.4425L9.87738 9L6.44238 5.5575L7.49988 4.5L11.9999 9L7.49988 13.5L6.44238 12.4425Z" fill="#525252"/>
-                        </g>
-                        <defs><clippath id="clip0_114_299"><rect width="18" height="18" fill="white"/></clippath></defs>
-                    </svg>
-                </li>
-                <li class="breadcrumbs__item breadcrumbs__item_active">
-                </li>
-            </ul>
+    <main>
+        <section class="product">
+            <div class="container product__container">
+                <ul class="breadcrumbs__list breadcrumbs__list_product">
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="index.html">Главная</a>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_114_296)">
+                                <path d="M6.44238 12.4425L9.87738 9L6.44238 5.5575L7.49988 4.5L11.9999 9L7.49988 13.5L6.44238 12.4425Z" fill="#525252"/>
+                            </g>
+                            <defs><clippath id="clip0_114_296"><rect width="18" height="18" fill="white"/></clippath></defs>
+                        </svg>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Каталог</a>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_114_299)">
+                                <path d="M6.44238 12.4425L9.87738 9L6.44238 5.5575L7.49988 4.5L11.9999 9L7.49988 13.5L6.44238 12.4425Z" fill="#525252"/>
+                            </g>
+                            <defs><clippath id="clip0_114_299"><rect width="18" height="18" fill="white"/></clippath></defs>
+                        </svg>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Ноутбуки</a>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_901_1415)">
+                                <path d="M6.44238 12.4425L9.87738 9L6.44238 5.5575L7.49988 4.5L11.9999 9L7.49988 13.5L6.44238 12.4425Z" fill="#525252"/>
+                            </g>
+                            <defs><clippath id="clip0_901_1415"><rect width="18" height="18" fill="white"/></clippath></defs>
+                        </svg>                            
+                    </li>
+                    <li class="breadcrumbs__item breadcrumbs__item_active">ASUS</li>
+                </ul>
 
-            <article class="article__wrapper">
-            </article>
+                <h1 class="product__title">15.6" Игровой ноутбук ASUS G513IE-HN004T</h1>
 
-            <aside class="add">
-                <ul class="add__list">
-                    <li class="add__item">
-                        <a class="add__link" href="#">
-                            <p class="add__title">Горящие туры в Стамбул от 20&nbsp;000 руб.</p>
-                            <p class="add__slogan">Окунись в настоящую восточную сказку</p>
+                <div class="product__wrapper">
+                    <div class="product__main">
+                        <picture>
+                            <source media="(max-width: 600px)" srcset="./imgs/notebook-asus@mob.avif" type="image/avif">
+                            <source media="(max-width: 600px)" srcset="./imgs/notebook-asus@mob.webp" type="image/webpf">
+                            <source media="(max-width: 600px)" srcset="./imgs/notebook-asus@mob.png" type="image/png">
+                            <source srcset="./imgs/notebook-asus.avif" type="image/avif">
+                            <source srcset="./imgs/notebook-asus.webp" type="image/webp">
+                            <img class="product__img" src="./imgs/notebook-asus.png" alt="Игровой ноутбук ASUS G513IE-HN004T" width="757" height="427">
+                        </picture>
+                        <span class="product__discount" aria-label="скидка">-15%</span>
+                    </div>
+                    <div class="product__description description">
+                        <p class="description__heading">Описание:</p>
+                        <p class="description__text">ROG Strix G15/17 – это игровая платформа для массового пользователя, работающая на базе операционной системы Windows 10 Pro. Благодаря мощной конфигурации, которая может включать в себя процессор AMD Ryzen 9 5900HX и видеокарту GeForce RTX 3070, этот ноутбук подходит для широкого спектра задач. Его дисплей доступен в двух вариантах: с киберспортивного уровня частотой обновления в 300 Гц или с высоким разрешением WQHD. Оба варианта обладают низким временем отклика (3 мс) и поддерживают адаптивную синхронизацию Adaptive-Sync. Оптимизированная система охлаждения гарантирует стабильную работу устройства под тяжелыми нагрузками, поэтому ROG Strix G15/17 позволит вам проявить все свое мастерство в любой игровой ситуации!</p>
+                    </div>   
+                    <div class="product__details">
+                        <div class="product__price price">
+                            <p class="price__current">109 090 ₽</p>
+                            <p class="price__old">140 590 ₽</p> 
+                        </div>
+                        <a href="#" class="product__credit">В кредит от 5600 ₽</a>
+                        <div class="product__button button">
+                            <button class="button__add-cart" type="button">Добавить в корзину</button>
+                            <button class="button__add-favorite" type="button" aria-label="Добавить в избранное">
+                                <svg width="33" height="33" viewBox="0 0 33 33" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_901_1437)">
+                                        <path d="M22.6875 4.125C20.295 4.125 17.9987 5.23875 16.5 6.99875C15.0012 5.23875 12.705 4.125 10.3125 4.125C6.0775 4.125 2.75 7.4525 2.75 11.6875C2.75 16.885 7.425 21.12 14.5062 27.555L16.5 29.3563L18.4937 27.5413C25.575 21.12 30.25 16.885 30.25 11.6875C30.25 7.4525 26.9225 4.125 22.6875 4.125ZM16.6375 25.5062L16.5 25.6437L16.3625 25.5062C9.8175 19.58 5.5 15.6613 5.5 11.6875C5.5 8.9375 7.5625 6.875 10.3125 6.875C12.43 6.875 14.4925 8.23625 15.2212 10.12H17.7925C18.5075 8.23625 20.57 6.875 22.6875 6.875C25.4375 6.875 27.5 8.9375 27.5 11.6875C27.5 15.6613 23.1825 19.58 16.6375 25.5062Z"/>
+                                    </g>
+                                    <defs><clippath id="clip0_901_1437"><rect width="33" height="33" fill="white"/></clippath></defs>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="product__info info">
+                            <li class="info__item">
+                                <p class="info__heading">Доставка</p>
+                                <p class="info__text">1-3 января</p>
+                            </li>
+                            <li class="info__item">
+                                <p class="info__heading">Продавец</p>
+                                <p class="info__text">ShopOnline</p>
+                            </li>
+                        </ul>
+                        <a class="product__notification notification" href="#">
+                            <svg class="notification__icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 13.586V10C19 6.783 16.815 4.073 13.855 3.258C13.562 2.52 12.846 2 12 2C11.154 2 10.438 2.52 10.145 3.258C7.185 4.074 5 6.783 5 10V13.586L3.293 15.293C3.19996 15.3857 3.12617 15.4959 3.07589 15.6172C3.0256 15.7386 2.99981 15.8687 3 16V18C3 18.2652 3.10536 18.5196 3.29289 18.7071C3.48043 18.8946 3.73478 19 4 19H20C20.2652 19 20.5196 18.8946 20.7071 18.7071C20.8946 18.5196 21 18.2652 21 18V16C21.0002 15.8687 20.9744 15.7386 20.9241 15.6172C20.8738 15.4959 20.8 15.3857 20.707 15.293L19 13.586ZM19 17H5V16.414L6.707 14.707C6.80004 14.6143 6.87383 14.5041 6.92412 14.3828C6.9744 14.2614 7.00019 14.1313 7 14V10C7 7.243 9.243 5 12 5C14.757 5 17 7.243 17 10V14C17 14.266 17.105 14.52 17.293 14.707L19 16.414V17ZM12 22C12.6193 22.0008 13.2235 21.8086 13.7285 21.4502C14.2335 21.0917 14.6143 20.5849 14.818 20H9.182C9.38566 20.5849 9.76648 21.0917 10.2715 21.4502C10.7765 21.8086 11.3807 22.0008 12 22Z"/>
+                            </svg>
+                            <span class="notification__caption">Узнать о снижении цены</span>    
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="recommended">
+            <div class="container recommended__container">
+                <h2 class="recommended__title">Рекомендуем также</h2>
+                <ul class="recommended__products products">
+                    <li class="recommended__item">
+                        <a class="recommended__link" href="#">
+                            <div class="recommended__img">
+                                <picture>
+                                    <source media="(max-width: 600px)" srcset="./imgs/t-shirts@mob.avif" type="image/avif">
+                                    <source media="(max-width: 600px)" srcset="./imgs/t-shirts@mob.webp" type="image/webp">
+                                    <source media="(max-width: 600px)" srcset="./imgs/t-shirts@mob.jpg" type="image/jpeg">                                    
+                                    <source srcset="./imgs/t-shirts.avif" type="image/avif">                                    
+                                    <source srcset="./imgs/t-shirts.webp" type="image/webp">                                    
+                                    <img src="./imgs/t-shirts.jpg" alt="Пара футболок" width="420" height="295" loading="lazy">
+                                </picture>
+                                
+                                <span class="recommended__sticker" aria-label="скидка">-50%</span>
+                            </div>
+                            <div class="recommended__prices">
+                                <p class="recommended__price-current" aria-label="цена со скидкой">1299 ₽</p>
+                                <p class="recommended__price-full" aria-label="цена без скидки">2598 ₽</p>
+                            </div>
+                            <p class="recommended__item-name">Пара футболок</p>
                         </a>
                     </li>
-                    <li class="add__item">
-                        <a class="add__link" href="#">
-                            <p class="add__title">Новый RENAULT DUSTER</p>
-                            <p class="add__slogan">Легендарный внедорожник в новом дизайне</p>
+                    <li class="recommended__item">
+                        <a class="recommended__link" href="#">
+                            <div class="recommended__img">
+                                <picture>
+                                    <source media="(max-width: 600px)" srcset="./imgs/sneakers@mob.avif" type="image/avif">
+                                    <source media="(max-width: 600px)" srcset="./imgs/sneakers@mob.webp" type="image/webp">
+                                    <source media="(max-width: 600px)" srcset="./imgs/sneakers@mob.jpg" type="image/jpeg"> 
+                                    <source srcset="./imgs/sneakers.avif" type="image/avif">
+                                    <source srcset="./imgs/sneakers.webp" type="image/webp"> 
+                                    <img src="./imgs/sneakers.jpg" alt="Кроссовки" width="420" height="295" loading="lazy">
+                                </picture>
+                                <span class="recommended__sticker" aria-label="скидка">-65%</span>
+                            </div>
+                            <div class="recommended__prices">
+                                <p class="recommended__price-current" aria-label="цена со скидкой">2099 ₽</p>
+                                <p class="recommended__price-full" aria-label="цена без скидки">5938 ₽</p>
+                            </div>
+                            <p class="recommended__item-name">Кроссовки</p>
+                        </a>
+                    </li>
+                    <li class="recommended__item">
+                        <a class="recommended__link" href="#">
+                            <div class="recommended__img">
+                                <picture>
+                                    <source media="(max-width: 600px)" srcset="./imgs/bed-sheets@mob.avif" type="image/avif">
+                                    <source media="(max-width: 600px)" srcset="./imgs/bed-sheets@mob.webp" type="image/webp">
+                                    <source media="(max-width: 600px)" srcset="./imgs/bed-sheets@mob.jpg" type="image/jpeg"> 
+                                    <source srcset="./imgs/bed-sheets.avif" type="image/avif">
+                                    <source srcset="./imgs/bed-sheets.webp" type="image/webp"> 
+                                    <img src="./imgs/bed-sheets.jpg" alt="Постельное белье" width="420" height="295" loading="lazy">
+                                </picture>
+                                <span class="recommended__sticker" aria-label="скидка">-10%</span>
+                            </div>
+                            <div class="recommended__prices">
+                                <p class="recommended__price-current" aria-label="цена со скидкой">3902 ₽</p>
+                                <p class="recommended__price-full" aria-label="цена без скидки">4490 ₽</p>
+                            </div>
+                            <p class="recommended__item-name">Постельное белье</p>
+                        </a>
+                    </li>
+                    <li class="recommended__item">
+                        <a class="recommended__link" href="#">
+                            <div class="recommended__img">
+                                <picture>
+                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.avif" type="image/avif">
+                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.webp" type="image/webp">
+                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.jpg" type="image/jpeg"> 
+                                    <source srcset="./imgs/hair_dryer.avif" type="image/avif">
+                                    <source srcset="./imgs/hair_dryer.webp" type="image/webp">
+                                    <img src="./imgs/hair_dryer.jpg" alt="Фен" width="420" height="295" loading="lazy">
+                                </picture>
+                                <span class="recommended__sticker" aria-label="скидка">-50%</span>
+                            </div>
+                            <div class="recommended__prices">
+                                <p class="recommended__price-current" aria-label="цена со скидкой">2999 ₽</p>
+                                <p class="recommended__price-full" aria-label="цена без скидки">6030 ₽</p>
+                            </div>
+                            <p class="recommended__item-name">Фен</p>
+                        </a>
+                    </li>
+                    <li class="recommended__item">
+                        <a class="recommended__link" href="#">
+                            <div class="recommended__img">
+                                <picture>
+                                    <source media="(max-width: 600px)" srcset="./imgs/bed-sheets@mob.avif" type="image/avif">
+                                    <source media="(max-width: 600px)" srcset="./imgs/bed-sheets@mob.webp" type="image/webpf">
+                                    <source media="(max-width: 600px)" srcset="./imgs/bed-sheets@mob.jpg" type="image/jpeg">
+                                    <source srcset="./imgs/bed-sheets.avif" type="image/avif">
+                                    <source srcset="./imgs/bed-sheets.webp" type="image/webp">
+                                    <img src="./imgs/bed-sheets.jpg" alt="Постельное белье" width="420" height="295" loading="lazy">
+                                </picture>
+                                <span class="recommended__sticker" aria-label="скидка">-10%</span>
+                            </div>
+                            <div class="recommended__prices">
+                                <p class="recommended__price-current" aria-label="цена со скидкой">3902 ₽</p>
+                                <p class="recommended__price-full" aria-label="цена без скидки">4490 ₽</p>
+                            </div>
+                            <p class="recommended__item-name">Постельное белье</p>
+                        </a>
+                    </li>
+                    <li class="recommended__item">
+                        <a class="recommended__link" href="#">
+                            <div class="recommended__img">
+                                <picture>
+                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.avif" type="image/avif">
+                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.webp" type="image/webpf">
+                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.jpg" type="image/jpeg">
+                                    <source srcset="./imgs/hair_dryer.avif" type="image/avif">
+                                    <source srcset="./imgs/hair_dryer.webp" type="image/webp">
+                                    <img src="./imgs/hair_dryer.jpg" alt="Фен" width="420" height="295" loading="lazy">
+                                </picture>
+                                <span class="recommended__sticker" aria-label="скидка">-50%</span>
+                            </div>
+                            <div class="recommended__prices">
+                                <p class="recommended__price-current" aria-label="цена со скидкой">2999 ₽</p>
+                                <p class="recommended__price-full" aria-label="цена без скидки">6030 ₽</p>
+                            </div>
+                            <p class="recommended__item-name">Фен</p>
                         </a>
                     </li>
                 </ul>
-            </aside>
-        </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">

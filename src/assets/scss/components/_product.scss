@@ -1,0 +1,424 @@
+.product {
+    padding: 15px 0 50px;
+    color: $secondary-color;
+
+    @include lg {
+        padding: 10px 0 30px;
+    }    
+    @include md {
+        padding: 5px 0 30px;
+    }    
+    @include sm {
+        padding: 6px 0 25px;
+    }
+
+    &__title {
+        font-size: 50px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #E8E8E8;
+        margin-bottom: 43px;
+
+        @include lg {
+            font-size: 40px;
+            padding-bottom: 20px;
+            margin-bottom: 50px;
+        }    
+        @include md {
+            font-size: 28px;
+            padding-bottom: 10px;
+            margin-bottom: 34px;
+        }    
+        @include sm {
+            font-size: 18px;
+            padding-bottom: 6px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: minmax(600px, 1350px) 420px;
+        grid-template-areas: 
+            'image details'
+            'description .';
+        gap: 80px 40px;
+
+        @include lg {
+            grid-template-columns: 1fr 300px;
+            grid-template-areas: 
+                'image details'
+                'description description';
+            gap: 50px 20px;
+        }    
+        @include md {
+            gap: 40px 20px;
+        }    
+        @media(max-width: 660px) {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            grid-template-areas: 
+                'image'
+                'details'
+                'description';
+        }
+    }
+
+    &__main {
+        grid-area: image;
+        position: relative;
+        justify-self: self-start;
+
+        @include md {
+            padding-top: 46px;
+        }
+        @include sm {
+            justify-self: center;
+            padding-top: 0;
+        }
+    }
+
+    &__img {
+        max-width: 757px;
+        height: auto;
+
+        @include lg {
+            max-width: 540px;
+        }    
+        @media(max-width: 920px) {
+            max-width: 380px;
+        }    
+        @media(max-width: 760px) {
+            max-width: 280px;
+        }
+    }
+
+    &__discount {
+        position: absolute;
+        top: 20px;
+        right: 50px;
+        display: block;
+        width: 88px;
+        height: 88px;
+        font-size: 30px;
+        color: $main-color;
+        background-color: #FFBD13;
+        border-radius: 50%;
+        border: none;
+        padding: 25px 9px;
+        
+        @include lg {
+            top: 10px;
+            right: 30px;
+            width: 66px;
+            height: 66px;
+            font-size: 20px;
+            padding: 20px 9px;
+        }
+        @include md {
+            top: 56px;
+            width: 50px;
+            height: 50px;
+            font-size: 16px;
+            padding: 15px 7px;  
+        }        
+        @include sm {
+            top: 5px;
+            right: 5px;
+            width: 33px;
+            height: 33px;
+            font-size: 12px;
+            padding: 9px 2px;  
+        }
+    }
+
+    &__description {
+        grid-area: description;
+        max-width: 1234px;
+
+        @include lg {
+            max-width: 100%;
+        }    
+    }
+
+    &__details {
+        grid-area: details;
+        align-self: self-start;
+        min-width: 420px;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.25);
+
+        @include lg {
+            min-width: 300px;
+            padding: 25px 20px;
+        }    
+        @media(max-width: 660px) {
+            min-width: 100%;
+            padding: 25px 50px 31px;
+            // border-radius: 0;
+        }
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        @include lg {
+            gap: 25px;
+        }    
+        @include sm {
+            gap: 18px;
+        }
+    }
+
+    &__credit {
+        display: block;
+        font-size: 16px;
+        color: $blue-color;
+        margin-bottom: 30px;
+
+        @include lg {
+            font-size: 14px;
+        }    
+        @include sm {
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: 23px;
+        margin-bottom: 30px;
+
+        @include lg {
+            gap: 21px;
+        }    
+        @include sm {
+            gap: 17px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 73px;
+        margin-bottom: 33px;
+        font-size: 16px;
+        font-weight: 400;    
+
+        @include lg {
+            gap: 60px;
+        }    
+        @include sm {
+            font-size: 12px;
+            gap: 33px;
+            margin-bottom: 22px;
+        }
+    }
+
+    &__notification {
+        display: flex;
+        align-items: end;
+        gap: 13px;
+        color: $blue-color;
+        font-size: 16px;
+
+        @include lg {
+            gap: 7px;
+        }
+        @include md {
+            font-size: 14px;
+        }    
+        @include sm {
+            gap: 4px;
+            font-size: 8px;
+        }
+    }
+}
+
+.breadcrumbs {
+    &__list {
+        &_product {
+            margin-bottom: 80px;
+
+            @include lg {
+                margin-bottom: 60px;
+            }    
+            @include md {
+                margin-bottom: 50px;
+            }    
+            @include sm {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.description {
+    &__heading {
+        font-size: 32px;
+        margin-bottom: 20px;
+
+        @include lg {
+            font-size: 24px;
+        }    
+        @include md {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }    
+        @include sm {
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+    }
+
+    &__text {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 150%;
+
+        @include lg {
+            font-size: 18px;
+        }    
+        @include md {
+            font-size: 16px;
+        }    
+        @include sm {
+            font-size: 12px;
+        }
+    }
+}
+
+.price {
+    margin-bottom: 7px;
+
+    @include lg {
+        margin-bottom: 16px;
+    }    
+    @include sm {
+        margin-bottom: 13px;
+    }
+
+    &__current {
+        font-size: 36px;
+        color: #F00;
+
+        @include lg {
+            font-size: 28px;
+        }    
+        @include sm {
+            font-size: 20px;
+        }
+    }
+
+    &__old {
+        font-size: 22px;
+        font-weight: 400;
+        text-decoration:line-through;
+
+        @include lg {
+            font-size: 18px;
+        }    
+        @include sm {
+            font-size: 12px;
+        }
+    }
+}
+
+.button {
+    &__add-cart {
+        font-size: 16px;
+        color: $main-color;
+        padding: 17px 42px;
+        text-align: center;
+        border-radius: 10px;
+        background: $blue-color;
+        border: 0;
+        outline: 0;
+
+        &:hover,
+        &:active {
+            background-color: #5D92E0;
+        }
+
+        &:focus-visible {
+            background-color: #3B65A5;
+        }
+
+        @include lg {
+            font-size: 16px;
+            padding: 12px 26px;
+            border-radius: 10px;
+        }    
+        @include sm {
+            min-width: 148px;
+            font-size: 12px;
+            padding: 8px 8px;
+            border-radius: 8px;
+        }
+    }
+
+    &__add-favorite {
+        width: 33px;
+        height: 33px;
+        color: $blue-color;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+
+        &:hover {
+            color: #5D92E0;
+        }
+
+        &:active {
+            color: #FF0000;
+        }
+
+        &:focus-visible {
+            color: #525252;
+        }
+
+        @include sm {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+.info {
+    &__heading {
+        color: #8F8F8F;
+        margin-bottom: 5px;
+
+        @include sm {
+            margin-bottom: 6px;
+        }
+    }
+}
+
+.notification {
+    &__icon {
+        width: 24px;
+        height: 24px;
+
+        @include lg {
+            width: 22px;
+            height: 22px;
+        }    
+        @include sm {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    &__caption {
+        color: $blue-color;
+    }
+}
+
+
+

@@ -5,6 +5,7 @@ import gulpSass from 'gulp-sass';
 import {deleteSync} from 'del';
 import htmlmin from 'gulp-htmlmin';
 import cleanCSS from 'gulp-clean-css';
+import rename from 'gulp-rename';
 import terser from 'gulp-terser';
 import sourcemaps from 'gulp-sourcemaps';
 import gulpImg from 'gulp-image';
@@ -12,6 +13,10 @@ import gulpWebp from 'gulp-webp';
 import gulpAvif from 'gulp-avif';
 import {stream as critical} from 'critical';
 import gulpIf from 'gulp-if';
+import autoprefixer from 'gulp-autoprefixer';
+import plumber from 'gulp-plumber';
+import webpackStream from 'webpack-stream';
+import webpack from 'webpack';
 
 const sass = gulpSass(sassPkg);
 
@@ -34,6 +39,7 @@ export const style = () => gulp
         .src('src/assets/scss/**/*.scss')
         .pipe(gulpIf(dev, sourcemaps.init()))
         .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer())
         .pipe(cleanCSS({
             2: {
                 specialComments: 0,
@@ -43,12 +49,39 @@ export const style = () => gulp
         .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.stream());
 
+const webpackConf = {
+    mode: dev ? 'development' : 'production',
+    devtool: dev ? 'eval-source-map' : false,
+    optimization: {
+        minimize: false,
+    },
+    output: {
+        filename: 'index.js',
+    },
+    module: {
+        rules: [],
+    },
+};
+
+if (!dev) {
+    webpackConf.module.rules.push({
+        test: /\.(js)$/,
+        exclude: /(node_modules)/,
+        loader: 'babel-loader',
+    });
+}
+
 // обработка js файлов
 export const js = () => gulp
         .src('src/assets/script/**/*.js')
-        .pipe(gulpIf(dev, sourcemaps.init()))
-        .pipe(terser())
-        .pipe(gulpIf(dev, sourcemaps.write('../maps')))
+        .pipe(plumber())
+        .pipe(webpackStream(webpackConf, webpack))
+        .pipe(gulpIf(!dev, gulp.dest('dist/js')))
+        .pipe(gulpIf(!dev, terser()))
+        .pipe(rename({
+            suffix: '.min',
+        }),
+        )
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream());
 
