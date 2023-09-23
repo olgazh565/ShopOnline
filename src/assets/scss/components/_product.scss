@@ -155,7 +155,6 @@
         @media(max-width: 660px) {
             min-width: 100%;
             padding: 25px 50px 31px;
-            // border-radius: 0;
         }
     }
 
@@ -177,6 +176,7 @@
         font-size: 16px;
         color: $blue-color;
         margin-bottom: 30px;
+        outline: 0;
 
         @include lg {
             font-size: 14px;
@@ -184,6 +184,15 @@
         @include sm {
             font-size: 12px;
             margin-bottom: 20px;
+        }
+
+        &:hover,
+        &:active {
+            color: #5D92E0;
+        }
+
+        &:focus-visible {
+            color: #3B65A5;
         }
     }
 
@@ -226,6 +235,16 @@
         gap: 13px;
         color: $blue-color;
         font-size: 16px;
+        outline: 0;        
+
+        &:hover,
+        &:active {
+            color: #5D92E0;
+        }
+
+        &:focus-visible {
+            color: #3B65A5;
+        }
 
         @include lg {
             gap: 7px;
@@ -415,8 +434,15 @@
         }
     }
 
-    &__caption {
-        color: $blue-color;
+    &__caption {     
+        &:hover,
+        &:active {
+            color: #5D92E0;
+        }
+
+        &:focus-visible {
+            color: #3B65A5;
+        }
     }
 }
 
