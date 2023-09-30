@@ -33,11 +33,11 @@ export const renderBasketItems = (dataLS) => {
             </div>
             <div class="goods__sum sum">
                 <p class="sum__total">
-                    ${(item.count * (item.price * (1 - item.discount / 100)))
+             ${Math.round(item.count * (item.price * (1 - item.discount / 100)))
             .toLocaleString()} ₽
                 </p>
                 <p class="sum__no-discount">
-                    ${(item.price * item.count).toLocaleString()} ₽
+                    ${Math.round(item.price * item.count).toLocaleString()} ₽
                 </p>
                 <a class="sum__credit" href="#">В кредит от 5600 ₽</a>
             </div>
@@ -98,12 +98,16 @@ export const countBasketTotal = (dataLS) => {
             (sum, el) => sum + el.count * el.price * el.discount / 100, 0);
     if (basketCountMain) basketCountMain.textContent = goodsNumber;
     if (goodsAmount) goodsAmount.textContent = goodsNumber;
-    if (countTotal) countTotal.textContent = sumTotal.toLocaleString() + ' ₽';
+    if (countTotal) {
+        countTotal.textContent = Math.round(sumTotal).toLocaleString() + ' ₽';
+    }
     if (countNoDiscount) {
-        countNoDiscount.textContent = sumNoDiscount.toLocaleString() + ' ₽';
+        countNoDiscount.textContent =
+            Math.round(sumNoDiscount).toLocaleString() + ' ₽';
     }
     if (discountSum) {
-        discountSum.textContent = sumDiscount.toLocaleString() + ' ₽';
+        discountSum.textContent =
+            Math.round(sumDiscount).toLocaleString() + ' ₽';
     }
 };
 
