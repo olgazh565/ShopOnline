@@ -274,6 +274,8 @@
         }
 
         &_type_basket {
+            position: relative;
+
             &::before {
                 background-image: url("../imgs/shopping-cart.svg");  
                 
@@ -297,6 +299,25 @@
     &__text {
         @include sm {
             display: none;     
+        }
+    }
+
+    &__basket-count {
+        display: block;
+        font-size: 14px;
+        line-height: 1;
+        background-color: $main-color;
+        border-radius: 50%;
+        color: $blue-color;
+        text-align: center;
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        top: 0;
+        right: 8px;
+
+        @include sm {
+            right: 0;
         }
     }
 }

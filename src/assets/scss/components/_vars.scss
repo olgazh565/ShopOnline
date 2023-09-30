@@ -36,3 +36,14 @@ $blue-color: #3670C7;
         @content;
     }
 }
+
+%flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%flexShort {
+    display: flex;
+    align-items: center;
+}

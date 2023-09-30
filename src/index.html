@@ -28,8 +28,9 @@
                 <a class="user__link user__link_type_profile" href="#" aria-label="ссылка на профиль пользователя">
                     <span class="user__text">Профиль</span>
                 </a>
-                <a class="user__link user__link_type_basket" href="#" aria-label="ссылка на корзину товаров">
+                <a class="user__link user__link_type_basket" href="basket.html" aria-label="ссылка на корзину товаров">
                     <span class="user__text">Корзина</span>
+                    <span class="user__basket-count">0</span>
                 </a>
                 <a class="user__link user__link_type_favorite" href="#" aria-label="ссылка на избранное">
                     <span class="user__text">Избранное</span>
@@ -46,7 +47,7 @@
                     <a class="banner__link" href="#">
                         <p class="banner__caption">-50% на все ноутбуки</p>
 
-                        <div class="banner__timer timer" role="timer" data-timer-deadline="2023/09/30 12:00">
+                        <div class="banner__timer timer" role="timer" data-timer-deadline="2023/10/05 12:00">
                         </div>
                     </a>
                 </div>
@@ -116,171 +117,10 @@
             </div>
         </section>
 
-        <section class="discount">
+        <section class="cards">
             <div class="container">
-                <h2 class="discount__title">Это выгодно!</h2>
-                <ul class="discount__list">
-                    <li class="discount__item">
-                        <a class="discount__link" href="product.html">
-                            <div class="discount__img">
-                                <picture>
-                                    <source media="(max-width: 600px)" srcset="./imgs/t-shirts@mob.avif" type="image/avif">
-                                    <source media="(max-width: 600px)" srcset="./imgs/t-shirts@mob.webp" type="image/webp">
-                                    <source media="(max-width: 600px)" srcset="./imgs/t-shirts@mob.jpg" type="image/jpeg">                                    
-                                    <source srcset="./imgs/t-shirts.avif" type="image/avif">                                    
-                                    <source srcset="./imgs/t-shirts.webp" type="image/webp">                                    
-                                    <img src="./imgs/t-shirts.jpg" alt="Пара футболок" width="420" height="295" loading="lazy">
-                                </picture>
-                                
-                                <span class="discount__sticker" aria-label="скидка">-50%</span>
-                            </div>
-                            <div class="discount__prices">
-                                <p class="discount__price-current" aria-label="цена со скидкой">1299 ₽</p>
-                                <p class="discount__price-full" aria-label="цена без скидки">2598 ₽</p>
-                            </div>
-                            <p class="discount__item-name">Пара футболок</p>
-                        </a>
-                    </li>
-                    <li class="discount__item">
-                        <a class="discount__link" href="product.html">
-                            <div class="discount__img">
-                                <picture>
-                                    <source media="(max-width: 600px)" srcset="./imgs/sneakers@mob.avif" type="image/avif">
-                                    <source media="(max-width: 600px)" srcset="./imgs/sneakers@mob.webp" type="image/webp">
-                                    <source media="(max-width: 600px)" srcset="./imgs/sneakers@mob.jpg" type="image/jpeg"> 
-                                    <source srcset="./imgs/sneakers.avif" type="image/avif">
-                                    <source srcset="./imgs/sneakers.webp" type="image/webp"> 
-                                    <img src="./imgs/sneakers.jpg" alt="Кроссовки" width="420" height="295" loading="lazy">
-                                </picture>
-                                <span class="discount__sticker" aria-label="скидка">-65%</span>
-                            </div>
-                            <div class="discount__prices">
-                                <p class="discount__price-current" aria-label="цена со скидкой">2099 ₽</p>
-                                <p class="discount__price-full" aria-label="цена без скидки">5938 ₽</p>
-                            </div>
-                            <p class="discount__item-name">Кроссовки</p>
-                        </a>
-                    </li>
-                    <li class="discount__item">
-                        <a class="discount__link" href="product.html">
-                            <div class="discount__img">
-                                <picture>
-                                    <source media="(max-width: 600px)" srcset="./imgs/bed-sheets@mob.avif" type="image/avif">
-                                    <source media="(max-width: 600px)" srcset="./imgs/bed-sheets@mob.webp" type="image/webp">
-                                    <source media="(max-width: 600px)" srcset="./imgs/bed-sheets@mob.jpg" type="image/jpeg"> 
-                                    <source srcset="./imgs/bed-sheets.avif" type="image/avif">
-                                    <source srcset="./imgs/bed-sheets.webp" type="image/webp"> 
-                                    <img src="./imgs/bed-sheets.jpg" alt="Постельное белье" width="420" height="295" loading="lazy">
-                                </picture>
-                                <span class="discount__sticker" aria-label="скидка">-10%</span>
-                            </div>
-                            <div class="discount__prices">
-                                <p class="discount__price-current" aria-label="цена со скидкой">3902 ₽</p>
-                                <p class="discount__price-full" aria-label="цена без скидки">4490 ₽</p>
-                            </div>
-                            <p class="discount__item-name">Постельное белье</p>
-                        </a>
-                    </li>
-                    <li class="discount__item">
-                        <a class="discount__link" href="product.html">
-                            <div class="discount__img">
-                                <picture>
-                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.avif" type="image/avif">
-                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.webp" type="image/webp">
-                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.jpg" type="image/jpeg"> 
-                                    <source srcset="./imgs/hair_dryer.avif" type="image/avif">
-                                    <source srcset="./imgs/hair_dryer.webp" type="image/webp">
-                                    <img src="./imgs/hair_dryer.jpg" alt="Фен" width="420" height="295" loading="lazy">
-                                </picture>
-                                <span class="discount__sticker" aria-label="скидка">-50%</span>
-                            </div>
-                            <div class="discount__prices">
-                                <p class="discount__price-current" aria-label="цена со скидкой">2999 ₽</p>
-                                <p class="discount__price-full" aria-label="цена без скидки">6030 ₽</p>
-                            </div>
-                            <p class="discount__item-name">Фен</p>
-                        </a>
-                    </li>
-                    <li class="discount__item">
-                        <a class="discount__link" href="product.html">
-                            <div class="discount__img">
-                                <picture>
-                                    <source media="(max-width: 600px)" srcset="./imgs/bed-sheets@mob.avif" type="image/avif">
-                                    <source media="(max-width: 600px)" srcset="./imgs/bed-sheets@mob.webp" type="image/webpf">
-                                    <source media="(max-width: 600px)" srcset="./imgs/bed-sheets@mob.jpg" type="image/jpeg">
-                                    <source srcset="./imgs/bed-sheets.avif" type="image/avif">
-                                    <source srcset="./imgs/bed-sheets.webp" type="image/webp">
-                                    <img src="./imgs/bed-sheets.jpg" alt="Постельное белье" width="420" height="295" loading="lazy">
-                                </picture>
-                                <span class="discount__sticker" aria-label="скидка">-10%</span>
-                            </div>
-                            <div class="discount__prices">
-                                <p class="discount__price-current" aria-label="цена со скидкой">3902 ₽</p>
-                                <p class="discount__price-full" aria-label="цена без скидки">4490 ₽</p>
-                            </div>
-                            <p class="discount__item-name">Постельное белье</p>
-                        </a>
-                    </li>
-                    <li class="discount__item">
-                        <a class="discount__link" href="product.html">
-                            <div class="discount__img">
-                                <picture>
-                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.avif" type="image/avif">
-                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.webp" type="image/webpf">
-                                    <source media="(max-width: 600px)" srcset="./imgs/hair_dryer@mob.jpg" type="image/jpeg">
-                                    <source srcset="./imgs/hair_dryer.avif" type="image/avif">
-                                    <source srcset="./imgs/hair_dryer.webp" type="image/webp">
-                                    <img src="./imgs/hair_dryer.jpg" alt="Фен" width="420" height="295" loading="lazy">
-                                </picture>
-                                <span class="discount__sticker" aria-label="скидка">-50%</span>
-                            </div>
-                            <div class="discount__prices">
-                                <p class="discount__price-current" aria-label="цена со скидкой">2999 ₽</p>
-                                <p class="discount__price-full" aria-label="цена без скидки">6030 ₽</p>
-                            </div>
-                            <p class="discount__item-name">Фен</p>
-                        </a>
-                    </li>
-                    <li class="discount__item">
-                        <a class="discount__link" href="product.html">
-                            <div class="discount__img">
-                                <picture>
-                                    <source media="(max-width: 600px)" srcset="./imgs/mittens@mob.avif" type="image/avif">
-                                    <source media="(max-width: 600px)" srcset="./imgs/mittens@mob.webp" type="image/webpf">
-                                    <source media="(max-width: 600px)" srcset="./imgs/mittens@mob.jpg" type="image/jpeg">
-                                    <source srcset="./imgs/mittens.avif" type="image/avif">
-                                    <source srcset="./imgs/mittens.webp" type="image/webp">
-                                    <img src="./imgs/mittens.jpg" alt="Варежки-мишки" width="420" height="295" loading="lazy">
-                                </picture>
-                                <span class="discount__sticker" aria-label="скидка">-30%</span>
-                            </div>
-                            <div class="discount__prices">
-                                <p class="discount__price-current" aria-label="цена со скидкой">540 ₽</p>
-                                <p class="discount__price-full" aria-label="цена без скидки">890 ₽</p>
-                            </div>
-                            <p class="discount__item-name">Варежки-мишки</p>
-                        </a>
-                    </li>
-                    <li class="discount__item">
-                        <a class="discount__link" href="product.html">
-                            <div class="discount__img">
-                                <picture>
-                                    <source media="(max-width: 600px)" srcset="./imgs/t-shirts@mob.avif" type="image/avif">
-                                    <source media="(max-width: 600px)" srcset="./imgs/t-shirts@mob.webp" type="image/webpf">
-                                    <source media="(max-width: 600px)" srcset="./imgs/t-shirts@mob.jpg" type="image/jpeg">
-                                    <source srcset="./imgs/t-shirts.avif" type="image/avif">
-                                    <source srcset="./imgs/t-shirts.webp" type="image/webp">
-                                    <img src="./imgs/t-shirts.jpg" alt="Пара футболок" width="420" height="295" loading="lazy">
-                                </picture>
-                                <span class="discount__sticker" aria-label="скидка">-50%</span>
-                            </div>
-                            <div class="discount__prices">
-                                <p class="discount__price-current" aria-label="цена со скидкой">1299 ₽</p>
-                                <p class="discount__price-full" aria-label="цена без скидки">2598 ₽</p>
-                            </div>
-                            <p class="discount__item-name">Пара футболок</p>
-                        </a>
-                    </li>
+                <h2 class="cards__title">Это выгодно!</h2>
+                <ul class="cards__list main-cards-list">
                 </ul>
             </div>
         </section>
@@ -292,34 +132,34 @@
                 <h3 class="footer__title">Каталог</h3>
                 <ul class="footer__list footer__list_catalog">
                     <li class="footer__item">
-                        <a class="footer__link" href="#">Смартфоны</a>
+                        <a class="footer__link" href="catalog.html?category=Смартфоны">Смартфоны</a>
                     </li>
                     <li class="footer__item">
-                        <a class="footer__link" href="#">Ноутбуки</a>
+                        <a class="footer__link" href="catalog.html?category=Ноутбуки">Ноутбуки</a>
                     </li>
                     <li class="footer__item">
-                        <a class="footer__link" href="#">Ювелирные изделия</a>
+                        <a class="footer__link" href="catalog.html?category=Ювелирные изделия">Ювелирные изделия</a>
                     </li>
                     <li class="footer__item">
-                        <a class="footer__link" href="#">Одежда</a>
+                        <a class="footer__link" href="catalog.html?category=Одежда">Одежда</a>
                     </li>
                     <li class="footer__item">
-                        <a class="footer__link" href="#">Бытовая техника</a>
+                        <a class="footer__link" href="catalog.html?category=Бытовая техника">Бытовая техника</a>
                     </li>
                     <li class="footer__item">
-                        <a class="footer__link" href="#">Бытовая химия</a>
+                        <a class="footer__link" href="catalog.html?category=Бытовая химия">Бытовая химия</a>
                     </li>
                     <li class="footer__item">
-                        <a class="footer__link" href="#">Книги и журналы</a>
+                        <a class="footer__link" href="catalog.html?category=Книги и журналы">Книги и журналы</a>
                     </li>
                     <li class="footer__item">
-                        <a class="footer__link" href="#">Домашний текстиль</a>
+                        <a class="footer__link" href="catalog.html?category=Домашний текстиль">Домашний текстиль</a>
                     </li>
                     <li class="footer__item">
-                        <a class="footer__link" href="#">Электроника</a>
+                        <a class="footer__link" href="catalog.html?category=Электроника">Электроника</a>
                     </li>
                     <li class="footer__item">
-                        <a class="footer__link" href="#">Косметика</a>
+                        <a class="footer__link" href="catalog.html?category=Косметика">Косметика</a>
                     </li>
                 </ul>
             </div>

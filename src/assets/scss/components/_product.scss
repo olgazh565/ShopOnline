@@ -35,7 +35,7 @@
         }
     }
 
-    &__wrapper {
+    &__wrap {
         display: grid;
         grid-template-columns: minmax(600px, 1350px) 420px;
         grid-template-areas: 
@@ -79,16 +79,22 @@
 
     &__img {
         max-width: 757px;
-        height: auto;
+        max-height: 427px;
+        object-fit: contain;
+        object-position: center left;
 
         @include lg {
             max-width: 540px;
+            max-height: 303px;
         }    
         @media(max-width: 920px) {
             max-width: 380px;
+            max-height: 213px;
         }    
         @media(max-width: 760px) {
             max-width: 280px;
+            max-height: 157px;
+            object-position: center;
         }
     }
 
@@ -100,6 +106,7 @@
         width: 88px;
         height: 88px;
         font-size: 30px;
+        text-align: center;
         color: $main-color;
         background-color: #FFBD13;
         border-radius: 50%;
@@ -155,6 +162,10 @@
         @media(max-width: 660px) {
             min-width: 100%;
             padding: 25px 50px 31px;
+            border-radius: 0;
+            border-left: 0;
+            border-right: 0;
+            margin: 0 -30px;
         }
     }
 

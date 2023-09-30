@@ -1,3 +1,4 @@
+import {createCard} from './createElements.js';
 import {getUserName} from './serviceAPI.js';
 
 export const renderArticles = (data) => {
@@ -9,7 +10,7 @@ export const renderArticles = (data) => {
 
         articleItem.innerHTML = `
             <a class="blog__link" href="article.html?id=${id}">
-                <img class="blog__image" src="./imgs/no-image.jpg"
+                <img class="blog__image" src="https://loremflickr.com/400/400?${Math.floor(Math.random() * 100)}"
                     alt="фото" width="195" height="195">
                 <div class="blog__info">
                     <p class="blog__title" title="${title}">
@@ -169,34 +170,64 @@ export const renderModal = () => {
                 <h3 class="modal__title">Каталог</h3>
                 <ul class="modal__list modal__list_catalog">
                     <li class="modal__item">
-                        <a class="modal__link" href="#">Смартфоны</a>
+                        <a class="modal__link" 
+                            href="catalog.html?category=Смартфоны">
+                            Смартфоны
+                        </a>
                     </li>
                     <li class="modal__item">
-                        <a class="modal__link" href="#">Ноутбуки</a>
+                        <a class="modal__link" 
+                            href="catalog.html?category=Ноутбуки">
+                            Ноутбуки
+                        </a>
                     </li>
                     <li class="modal__item">
-                        <a class="modal__link" href="#">Ювелирные изделия</a>
+                        <a class="modal__link" 
+                            href="catalog.html?category=Ювелирные изделия">
+                            Ювелирные изделия
+                        </a>
                     </li>
                     <li class="modal__item">
-                        <a class="modal__link" href="#">Одежда</a>
+                        <a class="modal__link" 
+                            href="catalog.html?category=Одежда">
+                            Одежда
+                        </a>
                     </li>
                     <li class="modal__item">
-                        <a class="modal__link" href="#">Бытовая техника</a>
+                        <a class="modal__link" 
+                            href="catalog.html?category=Бытовая техника">
+                            Бытовая техника
+                        </a>
                     </li>
                     <li class="modal__item">
-                        <a class="modal__link" href="#">Бытовая химия</a>
+                        <a class="modal__link" 
+                            href="catalog.html?category=Бытовая химия">
+                            Бытовая химия
+                        </a>
                     </li>
                     <li class="modal__item">
-                        <a class="modal__link" href="#">Книги и журналы</a>
+                        <a class="modal__link" 
+                            href="catalog.html?category=Книги и журналы">
+                            Книги и журналы
+                        </a>
                     </li>
                     <li class="modal__item">
-                        <a class="modal__link" href="#">Домашний текстиль</a>
+                        <a class="modal__link" 
+                            href="catalog.html?category=Домашний текстиль">
+                            Домашний текстиль
+                        </a>
                     </li>
                     <li class="modal__item">
-                        <a class="modal__link" href="#">Электроника</a>
+                        <a class="modal__link" 
+                            href="catalog.html?category=Электроника">
+                            Электроника
+                        </a>
                     </li>
                     <li class="modal__item">
-                        <a class="modal__link" href="#">Косметика</a>
+                        <a class="modal__link" 
+                            href="catalog.html?category=Косметика">
+                            Косметика
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -224,7 +255,7 @@ export const renderModal = () => {
                 <ul class="modal__list modal__list_contacts">
                     <li class="modal__item modal__item_contacts">
                         <a class="modal__link modal__link_contacts" 
-                            href="#contacts" aria-label="контакты">Контакты</a>
+                            href="#contacts">Контакты</a>
                     </li>
                 </ul>                
             </div>
@@ -234,3 +265,42 @@ export const renderModal = () => {
     return modal;
 };
 
+export const renderCards = (data, category = '') => {
+    const cardsListMain = document.querySelector('.main-cards-list');
+    const cardsListBasket = document.querySelector('.basket__cards-list');
+    const cardsListByCategory = document.querySelector('.category__list');
+    const cardsListRecommend = document.querySelector('.recommended__products');
+
+    if (cardsListMain) {
+        cardsListMain.innerHTML = '';
+        data.map(item => cardsListMain.append(createCard(item)));
+    }
+
+    if (cardsListBasket) {
+        cardsListBasket.innerHTML = '';
+        data.map(item => cardsListBasket.append(createCard(item)));
+    }
+
+    if (cardsListRecommend) {
+        cardsListRecommend.innerHTML = '';
+        data.map(item => cardsListRecommend.append(createCard(item)));
+    }
+
+    if (cardsListByCategory) {
+        const categoryTitle = document.querySelector('.category__title');
+        const categoryBreadcrumbs =
+            document.querySelector('.breadcrumbs__item_active-catalog');
+        categoryTitle.textContent = `${category}`;
+        categoryBreadcrumbs.textContent = `${category}`;
+
+        if (!data.length) {
+            const warning = document.createElement('p');
+            warning.classList.add('category__warning');
+            warning.textContent = 'В данной категории товары отсутствуют';
+            cardsListByCategory.before(warning);
+        } else {
+            cardsListByCategory.innerHTML = '';
+            data.map(item => cardsListByCategory.append(createCard(item)));
+        }
+    }
+};

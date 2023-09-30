@@ -144,6 +144,10 @@
         @include sm {
             gap: 2px;     
         }
+
+        &_days {
+            flex: 0 0 30%;
+        }
     }
 
     &__count {
@@ -159,6 +163,10 @@
         }
         @include sm {
             font-size: 20px;     
+        }
+
+        &_days {
+            text-align: right;
         }
     }
 

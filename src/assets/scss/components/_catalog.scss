@@ -1,0 +1,51 @@
+.category {
+    padding: 45px 0 96px;
+    color: $secondary-color;
+
+    @include lg {
+        padding: 30px 0 88px;
+    }    
+    @include md {
+        padding: 25px 0 57px;
+    }    
+    @include sm {
+        padding: 30px 0 100px;
+    }
+
+    &__breadcrumbs {
+        margin-bottom: 60px;
+        
+        @include lg {
+            margin-bottom: 50px;
+        }
+        @include md {
+            margin-bottom: 40px;
+        }
+        @include sm {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        font-size: 50px;
+        margin-bottom: 50px;
+    
+        @include lg {
+            font-size: 30px;
+            margin-bottom: 40px;
+        }
+        @include md {
+            margin-bottom: 30px;
+        }       
+        @include sm {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__warning {
+        font-size: 26px;
+        color: #F00;
+    }
+}
+

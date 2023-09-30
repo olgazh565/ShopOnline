@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopOnline</title>
 
@@ -10,6 +11,7 @@
     <link rel="preload" href="./fonts/Lato-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="./css/index.css">
     <script type="module" src="./js/index.min.js"></script>
+
 </head>
 <body>
     <header class="header">
@@ -26,7 +28,7 @@
                 <a class="user__link user__link_type_profile" href="#" aria-label="ссылка на профиль пользователя">
                     <span class="user__text">Профиль</span>
                 </a>
-                <a class="user__link user__link_type_basket" href="basket.html" aria-label="ссылка на корзину товаров">
+                <a class="user__link user__link_type_basket" href="#" aria-label="ссылка на корзину товаров">
                     <span class="user__text">Корзина</span>
                     <span class="user__basket-count">0</span>
                 </a>
@@ -38,56 +40,131 @@
     </header>
 
     <main>
-        <section class="product">
-            <div class="container product__container">
-                <ul class="breadcrumbs__list breadcrumbs__list_product">
-                    <li class="breadcrumbs__item">
-                        <a class="breadcrumbs__link" href="index.html">Главная</a>
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_114_296)">
-                                <path d="M6.44238 12.4425L9.87738 9L6.44238 5.5575L7.49988 4.5L11.9999 9L7.49988 13.5L6.44238 12.4425Z" fill="#525252"/>
-                            </g>
-                            <defs><clippath id="clip0_114_296"><rect width="18" height="18" fill="white"/></clippath></defs>
-                        </svg>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <a class="breadcrumbs__link" href="#">Каталог</a>
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_114_299)">
-                                <path d="M6.44238 12.4425L9.87738 9L6.44238 5.5575L7.49988 4.5L11.9999 9L7.49988 13.5L6.44238 12.4425Z" fill="#525252"/>
-                            </g>
-                            <defs><clippath id="clip0_114_299"><rect width="18" height="18" fill="white"/></clippath></defs>
-                        </svg>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <a class="breadcrumbs__link breadcrumbs__link_product" href="#">Ноутбуки</a>
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_901_1415)">
-                                <path d="M6.44238 12.4425L9.87738 9L6.44238 5.5575L7.49988 4.5L11.9999 9L7.49988 13.5L6.44238 12.4425Z" fill="#525252"/>
-                            </g>
-                            <defs><clippath id="clip0_901_1415"><rect width="18" height="18" fill="white"/></clippath></defs>
-                        </svg>                            
-                    </li>
-                    <li class="breadcrumbs__item breadcrumbs__item_active breadcrumbs__item_product">ASUS</li>
-                </ul>
-                <div class="product__wrapper">
-                    <h1 class="product__title">15.6" Игровой ноутбук ASUS G513IE-HN004T</h1>
-
-                    <div class="product__wrap">
-                    </div>    
+        <section class="basket">
+            <div class="container basket__container">
+                <div class="breadcrumbs basket__breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="index.html">Главная</a>
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_114_296)">
+                                    <path d="M6.44238 12.4425L9.87738 9L6.44238 5.5575L7.49988 4.5L11.9999 9L7.49988 13.5L6.44238 12.4425Z" fill="#525252"/>
+                                </g>
+                                <defs><clippath id="clip0_114_296"><rect width="18" height="18" fill="white"/></clippath></defs>
+                            </svg>
+                        </li>
+                        <li class="breadcrumbs__item breadcrumbs__item_active">Корзина</li>
+                    </ul>
                 </div>
-            </div>
-        </section>
         
-        <section class="recommended">
-            <div class="container recommended__container">
-                <h2 class="recommended__title">Рекомендуем также</h2>
-                <ul class="recommended__products cards__list">
+                <div class="basket__wrapper">
+                    <div class="basket__group basket__group_goods goods">
+                        <h1 class="basket__title">Корзина 
+                            <sup class="basket__count">0</sup>
+                        </h1>
+                        <div class="goods__controls controls">
+                            <label class="controls__checkbox checkbox-label" aria-label="выбрать все товары в корзине" tabindex="0">
+                                <input class="controls__checkbox-input checkbox-input" type="checkbox">
+                                <span class="controls__text">Выбрать все</span>
+                            </label>
+                            <button class="controls__delete-all" type="button" aria-label="Удалить все товары из корзины">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="currentColor">
+                                    <g>
+                                        <path d="M19.0214 5.35355L19.1679 5.5H19.375H23.25V7H6.75V5.5H10.625H10.8321L10.9786 5.35355L12.0821 4.25H17.9179L19.0214 5.35355ZM10 25.75C8.90114 25.75 8 24.8489 8 23.75V9.25H22V23.75C22 24.8489 21.0989 25.75 20 25.75H10Z"/>
+                                    </g>
+                                    <defs><clippath id="clip0_217_1895"><rect width="30" height="30" fill="white"/></clippath></defs>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="goods__list">
+                        </ul>                        
+                    </div>
+                    <div class="basket__group basket__group_delivery delivery">
+                        <div class="delivery__header">
+                            <h2 class="delivery__title">Способ доставки</h2>
+                            <button class="delivery__edit">Изменить</button>
+                        </div>
+                        <div class="delivery__address">
+                            <p class="delivery__address-title">Пункт выдачи</p>
+                            <p class="delivery__address-text">г. Москва (Московская область), улица Павлика Морозова, д. 48, (Пункт выдачи), Ежедневно 10:00-21:00</p>
+                        </div>
+                        <div class="delivery__price">
+                            <p class="delivery__price-title">Стоимость доставки</p>
+                            <p class="delivery__price-text">Бесплатная доставка</p>
+                        </div>
+                        <div class="delivery__wrap">
+                            <p class="delivery__date">10-13 февраля</p>
+                            <ul class="delivery__list">
+                                <li class="delivery__item">
+                                    <a class="delivery__item-link" href="product.html">
+                                        <img class="delivery__item-img" src="./imgs/sneakers.jpg" alt="фото товара" width="80" height="80">
+                                    </a>
+                                </li>
+                                <li class="delivery__item">
+                                    <a class="delivery__item-link" href="product.html">
+                                        <img class="delivery__item-img" src="./imgs/t-shirts.jpg" alt="фото товара" width="80" height="80">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="basket__group basket__group_total total">
+                        <div class="total__header">
+                            <div class="total__header-title">Итого:</div>
+                            <div class="total__header-sum">0 ₽</div>
+                        </div>
+                        <div class="total__data">
+                            <p class="total__data-title">
+                                Товары,   
+                                <span class="total__amount">0</span>
+                                шт.
+                            </p>
+                            <p class="total__data-text no-discount-sum">0 ₽</p>
+                        </div>
+                        <div class="total__data">
+                            <p class="total__data-title">Скидка</p>
+                            <p class="total__data-text discount-sum">0 ₽</p>
+                        </div>
+                        <div class="total__data total__data_mb20">
+                            <p class="total__data-title">Доставка</p>
+                            <p class="total__data-text delivery-cost">Бесплатно</p>
+                        </div>
+                        <div class="total__delivery">
+                            <p class="total__delivery-title">Доставка:</p>
+                            <button class="total__delivery-text" type="button">Пункт выдачи</button>
+                        </div>
+                        <div class="total__delivery-address">
+                            <p class="total__delivery-address-text">Ежедневно 10:00 - 21:00</p>
+                            <p class="total__delivery-address-text">г. Москва (Московская область), улица Павлика Морозова, д. 48</p>
+                        </div>
+                        <div class="total__delivery total__delivery_mb20">
+                            <p class="total__delivery-title">Дата:</p>
+                            <p class="total__delivery-text">10-13 февраля</p>
+                        </div>
+                        <div class="total__delivery total__delivery_mb30">
+                            <p class="total__delivery-title">Оплата:</p>
+                            <button class="total__delivery-text" type="button">Картой</button>
+                        </div>
+                        <button class="total__order-btn" type="button">Заказать</button>
+                        <div class="total__terms">
+                            <label class="total__terms-checkbox checkbox-label">
+                                <input class="total__terms-checkbox-input checkbox-input" type="checkbox">
+                                <span class="total__terms-text"><a class="total__terms-text_dark" href="#">Согласен с условиями</a> правил пользования торговой площадкой и правилами возврата</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </section>        
+
+        <section class="cards">
+            <div class="container">
+                <h2 class="cards__title">Это выгодно!</h2>
+                <ul class="cards__list basket__cards-list">
                 </ul>
             </div>
         </section>
     </main>
-
     <footer class="footer">
         <div class="container footer__container">
             <img class="footer__logo" src="./imgs/footer-logo.svg" alt="логотип интернет-магазина ShopOnline" width="190" height="41" loading="lazy">

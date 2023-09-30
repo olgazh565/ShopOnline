@@ -1,0 +1,812 @@
+.basket {
+    padding: 15px 0 50px;
+    color: $secondary-color;
+
+    @include lg {
+        padding: 10px 0 30px;
+    }
+    @include md {
+        padding: 5px 0 30px;
+    }
+    @include sm {
+        padding: 5px 0 25px;     
+    }
+
+    &__container {
+        @include md {
+            padding: 0;
+        }
+    }
+
+    &__breadcrumbs {
+        margin-bottom: 60px;
+        
+        @include lg {
+            margin-bottom: 50px;
+        }
+        @include md {
+            margin-bottom: 40px;
+            padding: 0 30px;
+        }
+        @include sm {
+            margin-bottom: 20px;
+            padding: 0 20px;     
+        }
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        grid-template-areas: 
+            'goods total'
+            'delivery total';
+        gap: 30px;
+
+        @include lg {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                'goods'
+                'delivery'
+                'total';
+        }
+
+        @include sm {
+            gap: 20px;
+        }
+    }
+
+    &__group {
+        border-radius: 16px;
+        box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.25);
+        padding: 30px;
+
+        @include md {
+            border-radius: 0;
+        }
+        @include sm {
+            padding: 20px;
+        }
+
+        &_goods {
+            grid-area: goods;
+        }
+
+        &_delivery {
+            grid-area: delivery;
+        }
+    
+        &_total {
+            grid-area: total;
+            width: 420px;
+            align-self: self-start;
+
+            @include md {
+                width: 100%;
+            }
+        }
+    }    
+
+    &__title {
+        font-size: 50px;
+        margin-bottom: 20px;
+
+        @include lg {
+            font-size: 40px;
+            margin-bottom: 13px;
+        }
+        @include md {
+            font-size: 28px;
+            margin-bottom: 19px;
+        }
+        @include sm {
+            font-size: 18px;
+            margin-bottom: 18px;     
+        }
+
+        sup {
+            font-size: 24px;
+
+            @include md {
+                font-size: 16px;
+            }
+            @include sm {
+                font-size: 12px;   
+            }
+        }
+    }    
+}
+
+.goods {
+    &__controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #E8E8E8;
+        margin-bottom: 20px;
+
+        @include lg {
+            padding-bottom: 31px;
+        }
+        @include sm {
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 170px minmax(200px, 658px) 115px minmax(143px, 242px);
+        grid-template-areas: 
+            'img title count total';
+        gap: 12px;
+        margin-bottom: 30px;
+
+        @include md {
+            grid-template-columns: 91px 1fr;
+            grid-template-areas: 
+                'img total'
+                'img title'
+                'img .'
+                'count delete';
+            gap: 0 14px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #E8E8E8;
+
+            &:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: 0;
+            }
+
+        }
+        @include sm {
+            grid-template-areas: 
+                'img total'
+                'img title'
+                'img title'
+                'count delete';
+            gap: 0 8px;
+            align-self: self-start;
+            margin-bottom: 15px;
+            padding-bottom: 15px;     
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__item-wrap {
+        grid-area: img;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include md {
+            display: block;
+            gap: 0;
+            position: relative;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__checkbox-wrap {
+        width: 20px;
+        height: 20px;
+
+        @include md {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__link-img {
+        display: block;
+        font-size: 0;
+        border-radius: 10px;
+        border: 1px solid #E8E8E8;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 130px;
+        height: 130px;
+        object-fit: contain;
+        object-position: center;
+
+        @include md {
+            width: 91px;
+            height: 91px;
+        }
+    }
+
+    &__link-title {
+        grid-area: title;
+        display: inline-block;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 150%;
+        align-self: self-start;
+        
+        @include md {
+            font-size: 18px;        
+        }
+        @include sm {
+            font-size: 12px;
+        }
+    }
+
+    &__count {
+        grid-area: count;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-self: start;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 150%;
+
+        @include md {
+            font-size: 18px;
+        }
+    }
+
+    &__sum {
+        grid-area: total;
+        justify-self: self-end;
+
+        @include md {
+            justify-self: self-start;
+            display: flex;            
+            align-items: center;
+            flex-flow: row wrap;
+            gap: 12px;
+            margin-bottom: 7px;
+        }
+        @include sm {
+            align-items: flex-start;
+            gap: 0 20px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__delete-btn {
+        grid-area: delete;
+        border: 0;
+        background-color: transparent;
+        display: none;
+        color:#C9C9C9;
+        transition: 0.2s ease-out;
+            
+        &:hover {
+            color: #8F8F8F;
+        }
+
+        @include md{
+            display: block;
+            justify-self: self-end;
+        }
+    }
+}
+.controls {
+    &__text {
+        color: #525252;
+    }
+
+    &__delete-all {
+        color:#C9C9C9;
+        background-color: transparent;
+        border: 0;
+        transition: 0.2s ease-out;
+
+        &:hover {
+            color: #8F8F8F;
+        }
+
+        @include md {
+            display: none;
+        }
+    }
+}
+
+.checkbox-label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    padding-left: 30px;
+}
+
+.checkbox-input {
+    position: absolute;
+    appearance: none;
+    cursor: pointer;
+    margin-left: -30px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: $blue-color;
+        border-radius: 2px;
+        transition: all 0.2s ease-out;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 5px;
+        width: 10px;
+        height: 6px;
+        border: 3px solid $main-color;
+        border-top: none;
+        border-right: none;
+        opacity: 0;
+        transform: rotate(-45deg);
+
+        @include sm {
+            border-width: 2px;
+        }
+    }
+
+    &:focus-visible:before {
+        outline: none;
+        background-color: #3B65A5;
+    }
+
+    &:checked::after {
+        opacity: 1
+    }
+
+    &:hover:before {
+        background-color: #5D92E0;
+    }
+}
+
+.count {
+    &__change {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        border: 1px solid #E8E8E8;
+        border-radius: 50%;
+        background-color: transparent;
+        width: 36px;
+        height: 36px;
+        padding: 9px;
+        outline: 0;
+        transition: all 0.2s ease-out;
+
+        @include md {
+            font-size: 12px;
+            width: 28px;
+            height: 28px;
+            padding: 7px;
+        }
+
+        &:hover,
+        &:active {
+            border-color: #2D2D2D;
+        }
+
+        &:focus-visible {
+            color: #3670C7;
+            border-color: #3670C7;
+        }
+    }
+}
+
+.sum {
+    &__total {
+        font-size: 26px;
+        margin-bottom: 6px;
+
+        @include md {
+            font-size: 22px;
+            margin-bottom: 0;
+        }
+        @include sm {
+            font-size: 16px;
+            flex: 0 0 75px;    
+        }
+    }
+
+    &__no-discount {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: line-through;
+        margin-bottom: 16px;
+
+        @include md {
+            font-size: 12px;
+            margin-bottom: 0;
+        }
+        @include sm {
+            font-size: 10px;
+            flex: 0 0 50px;    
+        }
+    }
+
+    &__credit {
+        font-size: 16px;
+        font-weight: 400;
+        color: $blue-color;
+        transition: all 0.2s ease-out;
+
+        @include md {
+            font-size: 12px;
+        }
+        @include sm {
+            font-size: 10px;
+            flex: 0 0 100%;    
+        } 
+        
+        &:hover,
+        &:active {
+            color: #5D92E0;
+        }
+
+        &:focus-visible {
+            color: #3B65A5;
+        }
+    }
+}
+
+.delivery {
+    &__header {
+        @extend %flex;
+        margin-bottom: 21px;
+
+        @include lg {
+            margin-bottom: 34px;
+        }
+        @include md {
+            display: block;
+            margin-bottom: 20px;
+        }
+        @include sm {
+            margin-bottom: 10px;
+        } 
+    }
+
+    &__title {
+        font-size: 50px;
+
+        @include lg {
+            font-size: 40px;
+        }
+        @include md {
+            display: none;
+        }
+    }
+
+    &__edit {
+        font-size: 16px;
+        font-weight: 700;
+        color: #3670C7;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        transition: 0.2s ease-out;
+
+        &:hover,
+        &:active {
+            color: #5D92E0;
+        }
+
+        &:focus-visible {
+            color: #3B65A5;
+        }
+
+        @include sm {
+            font-size: 12px;    
+        } 
+    }
+
+    &__address {
+        @extend %flexShort;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 15px;        
+    }
+
+    &__address-title {
+        flex: 1 1 266px;
+        color: #8F8F8F;
+        font-size: 16px;
+        font-weight: 400;
+
+        @include md {
+            display: none;
+        }
+    }
+
+    &__address-text {
+        flex: 0 1 calc(100% - 266px);
+
+        @include md {
+            font-size: 14px;
+            flex-basis: 100%;
+        }
+        @include sm {
+            font-size: 10px;
+        }
+    }
+
+    &__price {
+        @extend %flexShort;
+        justify-content: flex-start;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 32px;
+
+        @include md {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #E8E8E8;
+        }
+        @include sm {
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__price-title {
+        flex: 1 1 266px;
+        color: #8F8F8F;
+        font-size: 16px;
+        font-weight: 400;
+
+        @include md {
+            display: none;
+        }
+    }
+
+    &__price-text {
+        flex: 0 1 calc(100% - 266px);
+
+        @include md {
+            font-size: 14px;
+            flex-basis: 100%;
+        }
+        @include sm {
+            font-size: 12px;
+            color: #8F8F8F;
+        }
+    }
+
+    &__wrap {
+        @extend %flexShort;
+
+        @include md {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__date {
+        flex: 0 1 266px;
+        font-size: 16px;
+
+        @include md {
+            margin-bottom: 16px;
+            flex-basis: content;
+        }
+        @include sm {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__list {
+        @extend %flexShort;
+        flex: 0 1 calc(100% - 266px);
+        flex-flow: row wrap;
+        gap: 17px;
+
+        @include md {
+            gap: 15px;
+            flex-basis: auto;
+        }
+    }
+
+    &__item-link {
+        display: block;
+        border-radius: 10px;
+        border: 1px solid #E8E8E8;
+        overflow: hidden;
+        font-size: 0;
+        flex: 0 0 80px;
+
+        @include md {
+            flex: 0 0 60px;
+        }
+    }
+
+    &__item-img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        object-position: center;
+
+        @include md {
+            width: 60px;
+            height: 60px;    
+        }
+    }
+}
+
+.total {
+    &__header {
+        @extend %flex;
+        margin-bottom: 20px;
+        font-size: 26px;
+
+        @include md {
+            font-size: 22px;
+        }
+        @include sm {
+            font-size: 16px;
+        } 
+    }
+
+    &__data {
+        @extend %flex;
+        color: #8F8F8F;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 10px;
+
+        @include md {
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+        @include sm {
+            font-size: 10px;
+            margin-bottom: 10px;
+        }
+
+        &_mb20 {
+            margin-bottom: 20px;
+
+            @include sm {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &__delivery {
+        @extend %flexShort;
+        gap: 5px;
+        font-size: 16px;
+        margin-bottom: 10px;
+
+        @include md {
+            justify-content: space-between;
+        }
+
+        &_mb20 {
+            margin-bottom: 20px;
+
+            @include sm {
+                margin-bottom: 15px;
+            }
+        }
+        &_mb30 {
+            margin-bottom: 30px;
+
+            @include md {
+                margin-bottom: 40px;
+            }
+            @include sm {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__delivery-text {
+        color: $blue-color;
+        font-weight: 700;
+        border: 0;
+        background-color: transparent;
+    }
+
+    &__delivery-address {
+        color: #8F8F8F;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 20px;
+
+        @include md {
+            font-size: 12px;
+        }
+        @include sm {
+            font-size: 10px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__delivery-address-text:not(:last-child) {
+        margin-bottom: 5px;
+
+        @include md {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__order-btn {
+        color: $main-color;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 10px;
+        padding: 16px;
+        text-align: center;
+        min-width: 266px;
+        background-color: $blue-color;
+        border: none;
+        outline: 0;
+        transition: background-color 0.2s ease-out;
+        display: block;
+        margin: 0 auto 20px;
+
+        &:hover,
+        &:active {
+            background-color: #5D92E0;
+        }
+
+        &:focus-visible {
+            background-color: #3B65A5;
+        }
+
+        @include md {
+            width: 100%;
+            margin: 0 0 30px 0;
+        }
+        @include sm {
+            margin: 0 0 20px 0;
+        }
+    }
+
+    &__terms {
+        font-size: 16px;
+        font-weight: 400;
+        
+        @include md {
+            font-size: 12px;        
+        }
+        @include sm {
+            font-size: 10px;        
+        }
+    }
+
+    &__terms-checkbox-input {
+        margin-top: 5px;
+
+        @include md {
+            margin-top: 0;       
+        }
+    }
+
+    &__terms-text {
+        display: inline-block;
+        color: #8F8F8F;
+
+        @include md {
+            padding-top: 4px;       
+        }
+        @include sm {
+            padding-top: 0;       
+        }
+
+        &_dark {
+            color: #525252;
+        }
+    }
+}
