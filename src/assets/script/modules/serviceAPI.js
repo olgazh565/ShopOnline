@@ -60,7 +60,7 @@ export const getUserName = async (userId) => {
 export const getDiscountProducts = async (renderCards) => {
     const urlPathname = window.location.pathname;
 
-    if (urlPathname === '/' ||
+    if (window.location.href.endsWith('/') ||
         (urlPathname.includes('/index.html')) ||
         (urlPathname.includes('/basket.html'))) {
         try {
