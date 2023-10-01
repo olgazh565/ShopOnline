@@ -1,5 +1,6 @@
 .footer {
     background-color: $secondary-color;
+    color: $main-color;
     padding: 80px 0;
     font-size: 22px;
     font-weight: 400;
@@ -99,10 +100,10 @@
     }
 
     &__list {
-        &_catalog {
+        &_catalog {            
             display: grid;
             grid-template-columns: repeat(2, 225px);
-            grid-template-rows: repeat(5, max-content);
+            grid-template-rows: repeat(4, max-content);
             grid-auto-flow: column;
             column-gap: 30px;
 

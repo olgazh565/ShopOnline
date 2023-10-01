@@ -1,3 +1,76 @@
+export const createModal = (data) => {
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+
+    const modalContainer = document.createElement('div');
+    modalContainer.classList.add('container', 'modal__container');
+
+    const modalCatalogGroup = document.createElement('div');
+    modalCatalogGroup.classList.add(
+            'modal__group', 'modal__group_catalog');
+
+    const modalCatalogTitle = document.createElement('h3');
+    modalCatalogTitle.classList.add('modal__title');
+    modalCatalogTitle.textContent = 'Каталог';
+
+    const modalCatalogList = document.createElement('ul');
+    modalCatalogList.classList.add('modal__list', 'modal__list_catalog');
+
+    const modalCatalogItems = data.map(item => {
+        const modalCatalogItem = document.createElement('li');
+        modalCatalogItem.classList.add('modal__item');
+        modalCatalogItem.innerHTML = `
+            <a class="modal__link" 
+                href="catalog.html?category=${item}">${item}
+            </a>
+        `;
+        return modalCatalogItem;
+    });
+    modalCatalogList.append(...modalCatalogItems);
+    modalCatalogGroup.append(modalCatalogTitle, modalCatalogList);
+
+    const modalCustomersGroup = document.createElement('div');
+    modalCustomersGroup.classList.add(
+            'modal__group', 'modal__group_customers', 'customers');
+    modalCustomersGroup.innerHTML = `
+        <h3 class="modal__title">Покупателям</h3>
+        <ul class="modal__list modal__list_customers">
+            <li class="modal__item">
+                <a class="modal__link" href="#">Оплата заказа</a>
+            </li>
+            <li class="modal__item">
+                <a class="modal__link" href="#">Условия доставки</a>
+            </li>
+            <li class="modal__item">
+                <a class="modal__link" href="#">
+                    Условия возврата заказа
+                </a>
+            </li>
+            <li class="modal__item">
+                <a class="modal__link" href="blog.html">Блог</a>
+            </li>
+        </ul>             
+    `;
+
+    const modalContactsGroup = document.createElement('div');
+    modalContactsGroup.classList.add(
+            'modal__group', 'modal__group_contacts', 'contacts');
+    modalContactsGroup.innerHTML = `
+        <h3 class="modal__title">Связаться с нами</h3>
+        <ul class="modal__list modal__list_contacts">
+            <li class="modal__item modal__item_contacts">
+                <a class="modal__link modal__link_contacts" 
+                    href="#contacts">Контакты</a>
+            </li>
+        </ul>               
+    `;
+    modalContainer.append(
+            modalCatalogGroup, modalCustomersGroup, modalContactsGroup);
+    modal.append(modalContainer);
+
+    return modal;
+};
+
 export const createCard = (item) => {
     const card = document.createElement('li');
     card.classList.add('cards__item');
@@ -109,4 +182,23 @@ export const createProduct = (item) => {
             </div>
         </div>    
     `;
+};
+
+export const createFooterCatalog = (data) => {
+    const footerCatalog = document.querySelector('.footer__list_catalog');
+    footerCatalog.innerHTML = '';
+
+    const footerCatalogItems = data.map(item => {
+        const footerCatalogItem = document.createElement('li');
+        footerCatalogItem.classList.add('footer__item');
+
+        footerCatalogItem.innerHTML = `
+            <a class="footer__link" href="catalog.html?category=${item}">
+                ${item}
+            </a>
+        `;
+        return footerCatalogItem;
+    });
+
+    footerCatalog.append(...footerCatalogItems);
 };

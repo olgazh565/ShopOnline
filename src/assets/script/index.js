@@ -1,8 +1,10 @@
 import {findTimer} from './modules/timer.js';
+import {createFooterCatalog, createProduct} from './modules/createElements.js';
 import {
     controlArrows,
     controlModalMenu,
     controlPagination,
+    controlSearchForm,
 } from './modules/controls.js';
 import {
     renderArticle,
@@ -13,11 +15,12 @@ import {
 import {
     getArticle,
     getArticles,
+    getCategories,
     getDiscountProducts,
     getProduct,
     getProductsByCategory,
+    getSearchProducts,
 } from './modules/serviceAPI.js';
-import {createProduct} from './modules/createElements.js';
 import {addToBasket,
     controlCheckbox,
     countBasketTotal,
@@ -31,7 +34,7 @@ import {addToBasket,
 
 const init = async () => {
     findTimer();
-    controlModalMenu();
+
     await getArticles(
             renderArticles,
             renderPagination,
@@ -53,6 +56,11 @@ const init = async () => {
     editItemBasket(dataLS);
     deleteItemBasket(dataLS);
     controlCheckbox();
+
+    await getCategories(createFooterCatalog, controlModalMenu);
+
+    controlSearchForm();
+    await getSearchProducts(renderCards);
 
     console.log('window.location.pathname:', window.location.pathname);
 };

@@ -1,4 +1,4 @@
-import {renderModal} from './renderElements.js';
+import {createModal} from './createElements.js';
 
 // управление пагинацией
 export const controlPagination = ({page}) => {
@@ -46,10 +46,9 @@ export const controlArrows = ({pages: pagesTotal, page}) => {
 };
 
 // Управление кнопкой меню
-
-export const controlModalMenu = () => {
+export const controlModalMenu = (data) => {
     const menuBtn = document.querySelector('.header__menu-button');
-    const modalMenu = renderModal();
+    const modalMenu = createModal(data);
 
     menuBtn.addEventListener('click', () => {
         document.body.append(modalMenu);
@@ -68,4 +67,16 @@ export const controlModalMenu = () => {
     });
 };
 
+// Управление поиском
+export const controlSearchForm = () => {
+    const form = document.querySelector('.header__search');
 
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const search = form.search.value.trim();
+        if (!search) return;
+
+        window.location.assign(`catalog.html?search=${search}`);
+    });
+};

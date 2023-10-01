@@ -160,115 +160,10 @@ export const renderArticle = async ({user_id: userId, title, body}) => {
     `;
 };
 
-export const renderModal = () => {
-    const modal = document.createElement('div');
-    modal.classList.add('modal');
-
-    modal.innerHTML = `
-        <div class="container modal__container">
-            <div class="modal__group modal__group_catalog catalog">
-                <h3 class="modal__title">Каталог</h3>
-                <ul class="modal__list modal__list_catalog">
-                    <li class="modal__item">
-                        <a class="modal__link" 
-                            href="catalog.html?category=Смартфоны">
-                            Смартфоны
-                        </a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" 
-                            href="catalog.html?category=Ноутбуки">
-                            Ноутбуки
-                        </a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" 
-                            href="catalog.html?category=Ювелирные изделия">
-                            Ювелирные изделия
-                        </a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" 
-                            href="catalog.html?category=Одежда">
-                            Одежда
-                        </a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" 
-                            href="catalog.html?category=Бытовая техника">
-                            Бытовая техника
-                        </a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" 
-                            href="catalog.html?category=Бытовая химия">
-                            Бытовая химия
-                        </a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" 
-                            href="catalog.html?category=Книги и журналы">
-                            Книги и журналы
-                        </a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" 
-                            href="catalog.html?category=Домашний текстиль">
-                            Домашний текстиль
-                        </a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" 
-                            href="catalog.html?category=Электроника">
-                            Электроника
-                        </a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" 
-                            href="catalog.html?category=Косметика">
-                            Косметика
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="modal__group modal__group_customers customers">
-                <h3 class="modal__title">Покупателям</h3>
-                <ul class="modal__list modal__list_customers">
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Оплата заказа</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">Условия доставки</a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="#">
-                            Условия возврата заказа
-                        </a>
-                    </li>
-                    <li class="modal__item">
-                        <a class="modal__link" href="blog.html">Блог</a>
-                    </li>
-                </ul>                
-            </div>
-            <div class="modal__group modal__group_contacts contacts">
-                <h3 class="modal__title">Связаться с нами</h3>
-                <ul class="modal__list modal__list_contacts">
-                    <li class="modal__item modal__item_contacts">
-                        <a class="modal__link modal__link_contacts" 
-                            href="#contacts">Контакты</a>
-                    </li>
-                </ul>                
-            </div>
-        </div>
-    `;
-
-    return modal;
-};
-
-export const renderCards = (data, category = '') => {
+export const renderCards = (data, category = '', search = '') => {
     const cardsListMain = document.querySelector('.main-cards-list');
     const cardsListBasket = document.querySelector('.basket__cards-list');
-    const cardsListByCategory = document.querySelector('.category__list');
+    const cardsListCatalog = document.querySelector('.catalog__list');
     const cardsListRecommend = document.querySelector('.recommended__products');
 
     if (cardsListMain) {
@@ -286,21 +181,24 @@ export const renderCards = (data, category = '') => {
         data.map(item => cardsListRecommend.append(createCard(item)));
     }
 
-    if (cardsListByCategory) {
-        const categoryTitle = document.querySelector('.category__title');
+    if (cardsListCatalog) {
+        const categoryTitle = document.querySelector('.catalog__title');
         const categoryBreadcrumbs =
             document.querySelector('.breadcrumbs__item_active-catalog');
-        categoryTitle.textContent = `${category}`;
-        categoryBreadcrumbs.textContent = `${category}`;
+        categoryTitle.textContent = category ? `${category}` :
+            `По вашему запросу "${search}" найдено ${data.length} товара`;
+        categoryBreadcrumbs.textContent = category ? `${category}` : 'Поиск';
 
         if (!data.length) {
             const warning = document.createElement('p');
-            warning.classList.add('category__warning');
-            warning.textContent = 'В данной категории товары отсутствуют';
-            cardsListByCategory.before(warning);
+            warning.classList.add('catalog__warning');
+            warning.textContent = category ?
+                'В данной категории товары отсутствуют' : '';
+            cardsListCatalog.before(warning);
         } else {
-            cardsListByCategory.innerHTML = '';
-            data.map(item => cardsListByCategory.append(createCard(item)));
+            cardsListCatalog.innerHTML = '';
+            data.map(item => cardsListCatalog.append(createCard(item)));
         }
     }
 };
+

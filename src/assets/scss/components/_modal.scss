@@ -1,0 +1,110 @@
+.modal {
+    background-color: $main-color;
+    position: absolute;
+    width: 100%;
+    top: 107px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 150%;
+    color: $secondary-color;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-out;
+
+    @include lg {        
+        top: 190px;
+    }
+
+    @include md {  
+        top: 150px;      
+        font-size: 16px;
+    }
+    @include sm {        
+        font-size: 12px;    
+    }
+
+    &.show-modal {
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.2s ease-out;
+    }
+
+    &__container {
+        padding: 52px 30px 92px;
+        display: flex;
+        align-items: flex-start;
+        flex-flow: row wrap;
+        gap: 50px 225px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20);
+
+        @media (max-width: 1500px) {
+            gap: 50px 150px;
+        }
+        @include lg {
+            gap: 50px 100px;
+        }
+        @include md {
+            padding: 30px;
+            gap: 50px;
+        }
+        @include sm {
+            padding: 20px 20px 30px;
+            gap: 30px;    
+        }
+    }
+
+    &__title {
+        font-size: 32px;
+        line-height: 130%;
+        margin-bottom: 40px;
+
+        @include md {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+        @include sm {
+            font-size: 20px;
+            margin-bottom: 10px;     
+        }
+    }
+
+    &__list {
+        &_catalog {
+            display: grid;
+            grid-template-columns: repeat(2, 225px);
+            grid-template-rows: repeat(4, max-content);
+            grid-auto-flow: column;
+            column-gap: 83px;
+
+            @include lg {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(10, max-content);
+                column-gap: 0;
+            }
+        }
+    }
+
+    &__item {
+        margin-bottom: 20px;
+
+        &:hover {
+            color: $blue-color;
+        }
+
+        @include md {
+            margin-bottom: 10px;
+        }
+
+        @include sm {
+            font-size: 12px;
+            line-height: 120%;     
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    } 
+}

@@ -20,7 +20,7 @@ import webpack from 'webpack';
 
 const sass = gulpSass(sassPkg);
 
-let dev = false;
+let dev = true;
 
 // задачи
 

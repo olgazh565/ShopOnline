@@ -66,7 +66,6 @@ export const getDiscountProducts = async (renderCards) => {
         try {
             const result = await fetch(`${API_URL_CRM}/api/goods/discount`);
             const data = await result.json();
-            console.log('data: ', data);
 
             renderCards(data.slice(0, 8));
         } catch (err) {
@@ -109,11 +108,9 @@ export const getProduct = async (
 
 export const getProductsByCategory = async (renderCards) => {
     const params = new URLSearchParams(window.location.search);
-    const urlPathname = window.location.pathname;
-
-    if (!params.toString() || !urlPathname.includes('/catalog.html')) return;
-
     const category = params.get('category');
+
+    if (!params.toString() || !category) return;
 
     try {
         const result = await fetch(`
@@ -122,7 +119,37 @@ export const getProductsByCategory = async (renderCards) => {
         const data = await result.json();
         console.log('data: ', data);
 
-        renderCards(data, category);
+        renderCards(data, category, '');
+    } catch (err) {
+        console.log(err);
+    }
+};
+
+export const getCategories = async (createFooterCatalog, controlModalMenu) => {
+    try {
+        const result = await fetch(`${API_URL_CRM}/api/category`);
+        const data = await result.json();
+        const reversedData = data.reverse();
+
+        createFooterCatalog(reversedData);
+        controlModalMenu(reversedData);
+    } catch (err) {
+        console.log(err);
+    }
+};
+
+export const getSearchProducts = async (renderCards) => {
+    const params = new URLSearchParams(window.location.search);
+    const search = params.get('search');
+
+    if (!params.toString() || !search) return;
+
+    try {
+        const result = await fetch(`${API_URL_CRM}/api/goods?search=${search}`);
+        const data = await result.json();
+        console.log('data: ', data);
+
+        renderCards(data, '', search);
     } catch (err) {
         console.log(err);
     }
