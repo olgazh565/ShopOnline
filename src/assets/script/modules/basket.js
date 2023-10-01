@@ -33,11 +33,11 @@ export const renderBasketItems = (dataLS) => {
             </div>
             <div class="goods__sum sum">
                 <p class="sum__total">
-        ${(Math.round(item.count * (item.price * (1 - item.discount / 100))))
+            ${Math.round(item.count * (item.price * (1 - item.discount / 100)))
             .toLocaleString()} ₽
                 </p>
                 <p class="sum__no-discount">
-                    ${(Math.round(item.price * item.count)).toLocaleString()} ₽
+                    ${Math.round(item.price * item.count).toLocaleString()} ₽
                 </p>
                 <a class="sum__credit" href="#">В кредит от 5600 ₽</a>
             </div>
@@ -188,9 +188,10 @@ export const editItemBasket = (dataLS) => {
         localStorage.setItem('basket', JSON.stringify(dataLS));
 
         countValue.textContent = dataLS[index]?.count;
-        sumTotal.textContent = (dataLS[index]?.count * dataLS[index]?.price *
+        sumTotal.textContent =
+            Math.round(dataLS[index]?.count * dataLS[index]?.price *
             (1 - dataLS[index]?.discount / 100)).toLocaleString() + ' ₽';
-        sumNoDiscount.textContent = (dataLS[index]?.count *
+        sumNoDiscount.textContent = Math.round(dataLS[index]?.count *
             dataLS[index]?.price).toLocaleString() + ' ₽';
 
         countBasketTotal(dataLS);
